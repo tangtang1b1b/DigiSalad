@@ -52,21 +52,36 @@
                     cursor: pointer
             .hamber
                 margin: 0 20px
-                height: 22px
+                height: 21px
+                width: 30px
                 display: flex
                 flex-direction: column
-                justify-content: space-between
                 align-items: flex-end
+                position: relative
                 &:hover
                     cursor: pointer
                 .path
+                    position: absolute
+                    top: 0
                     border-radius: 3px
-                    // background-color: #414042
+                    transition: 0.3s
                     background-color: #fff
                     width: 30px
                     height: 3px
+                .path:nth-child(1)
+                    top: 0px
+                .path:nth-child(2)
+                    top: 9px
                 .path:nth-child(3)
+                    top: 18px
                     width: 26px
+                &:hover .path:nth-child(3)
+                    width: 30px
+@keyframes hamber
+    0%
+        opacity: 0
+    100%
+        opacity: 1
 @keyframes logo
     0%
         opacity: 0

@@ -61,25 +61,47 @@
 }
 .head .headinner .start .hamber {
   margin: 0 20px;
-  height: 22px;
+  height: 21px;
+  width: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: flex-end;
+  position: relative;
 }
 .head .headinner .start .hamber:hover {
   cursor: pointer;
 }
 .head .headinner .start .hamber .path {
+  position: absolute;
+  top: 0;
   border-radius: 3px;
+  transition: 0.3s;
   background-color: #fff;
   width: 30px;
   height: 3px;
 }
+.head .headinner .start .hamber .path:nth-child(1) {
+  top: 0px;
+}
+.head .headinner .start .hamber .path:nth-child(2) {
+  top: 9px;
+}
 .head .headinner .start .hamber .path:nth-child(3) {
+  top: 18px;
   width: 26px;
 }
+.head .headinner .start .hamber:hover .path:nth-child(3) {
+  width: 30px;
+}
 
+@keyframes hamber {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes logo {
   0% {
     opacity: 0;
