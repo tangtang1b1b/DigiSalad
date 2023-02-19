@@ -1,3 +1,10 @@
+@mixin font($fz,$fw,$lh,$ls,$color)
+    font-size: $fz
+    font-weight: $fw
+    line-height: $lh
+    letter-spacing: $ls
+    color: $color
+    
 *
     font-family: Proxima-Nova
     font-style: normal
@@ -16,11 +23,277 @@
     display: flex
     align-items: center
     transition: 0.3s
+    .list
+        display: none
+        position: absolute
+        box-sizing: border-box
+        padding: 80px
+        top: 0
+        width: 100vw
+        height: 100vh
+        background-image: url(../image/Rectangle.png)
+        background-size: cover
+        transition: 0.2s
+        .listinner
+            margin: auto
+            width: calc( 100vw - 400px )
+            display: flex
+            justify-content: space-evenly
+            .lil
+                width: 33.3333%
+                height: calc( 100vh - 150px )
+                display: flex
+                flex-direction: column
+                justify-content: space-evenly
+                position: relative
+                .abus::before
+                    content: ""
+                    position: absolute
+                    background-image: url(../image/1.svg)
+                    background-size: cover
+                    width: 50px
+                    height: 70px
+                    left: 50px
+                .abus
+                    width: 100%
+                    height: 30%
+                    background-color: #26C6D0
+                    background-image: url(../image/video-thumbnail.png)
+                    background-size: cover
+                    border-radius: 30px
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+                    box-sizing: border-box
+                    padding: 40px 20px
+                    &:hover
+                        cursor: pointer
+                    h4
+                        +font(16px,400,19px,1.8px,#fff)
+                    h3
+                        +font(32px,700,39px,3.36px,#fff)
+                        position: relative
+                        span
+                            left: 180px
+                            bottom: 5px
+                            position: absolute
+                            font-size: 48px
+                            color: #EE6C8A
+                .work::before
+                    content: ""
+                    position: absolute
+                    background-image: url(../image/2.svg)
+                    background-size: cover
+                    width: 60px
+                    height: 60px
+                    left: 50px
+                .work
+                    position: relative
+                    width: 100%
+                    height: 45%
+                    background-color: #EE6C8A
+                    background-image: url(../image/ChampionREIT-Showcase.png)
+                    background-size: cover
+                    border-radius: 30px
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    justify-content: flex-end
+                    box-sizing: border-box
+                    padding: 40px 20px
+                    &:hover
+                        cursor: pointer
+                    h4
+                        +font(16px,400,19px,1.8px,#fff)
+                    h3
+                        +font(32px,700,39px,3.36px,#fff)  
+                        position: relative
+                        span
+                            left: 120px
+                            bottom: 5px
+                            position: absolute
+                            font-size: 48px
+                            color: #26C6D0                 
+            .lim
+                width: 30.3333%
+                height: calc( 100vh - 150px )
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                align-items: center
+                .caree::before
+                    content: ""
+                    position: absolute
+                    background-image: url(../image/3.svg)
+                    background-size: cover
+                    width: 90px
+                    height: 45px
+                    left: 20px
+                    bottom: 120px
+                .caree
+                    position: relative
+                    width: 65%
+                    height: 60%
+                    background-color: #E6A94E
+                    background-image: url(../image/DigiSalad-Promotional-Video-Storyboard-v1-14.png)
+                    background-size: cover
+                    border-radius: 30px
+                    display: flex
+                    flex-direction: column
+                    justify-content: flex-end
+                    box-sizing: border-box
+                    padding: 40px 20px
+                    &:hover
+                        cursor: pointer
+                    h4
+                        +font(16px,400,19px,1.8px,#fff)
+                    h3
+                        +font(32px,700,39px,3.36px,#fff)
+                        position: relative
+                        span
+                            left: 160px
+                            bottom: 5px
+                            position: absolute
+                            font-size: 48px
+                            color: #EE6C8A
+                .insig::before
+                    content: ""
+                    position: absolute
+                    background-image: url(../image/4.svg)
+                    background-size: cover
+                    width: 20px
+                    height: 70px
+                    left: 30px
+                    bottom: 100px
+                .insig
+                    position: relative
+                    width: 65%
+                    height: 35%
+                    background-color: #26D0A8
+                    background-image: url(../image/DigiSalad-Promotional-Video-Storyboard-v1-13.png)
+                    background-size: cover
+                    border-radius: 30px
+                    display: flex
+                    flex-direction: column
+                    justify-content: flex-end
+                    box-sizing: border-box
+                    padding: 40px 20px
+                    &:hover
+                        cursor: pointer
+                    h4
+                        +font(16px,400,19px,1.8px,#fff)
+                    h3
+                        +font(32px,700,39px,3.36px,#fff)
+                        position: relative
+                        span
+                            left: 160px
+                            bottom: 5px
+                            position: absolute
+                            font-size: 48px
+                            color: #EE6C8A
+            .lir
+                width: 33.3333%
+                height: calc( 100vh - 150px )
+                display: flex
+                flex-direction: column
+                justify-content: space-evenly
+                .serv::before
+                    content: ""
+                    position: absolute
+                    background-image: url(../image/10.svg)
+                    background-size: cover
+                    width: 32px
+                    height: 60px
+                    left: 30px
+                    bottom: 110px
+                .serv
+                    position: relative
+                    width: 100%
+                    height: 45%
+                    background-color: #585880
+                    background-image: url(../image/DigiSalad-Promotional-Video-Storyboard-v1-24.png)
+                    background-size: cover
+                    border-radius: 30px
+                    display: flex
+                    flex-direction: column
+                    justify-content: flex-end
+                    box-sizing: border-box
+                    padding: 40px 20px
+                    &:hover
+                        cursor: pointer
+                    h4
+                        +font(16px,400,19px,1.8px,#fff)
+                    h3
+                        +font(32px,700,39px,3.36px,#fff)
+                        position: relative
+                        span
+                            left: 170px
+                            bottom: 5px
+                            position: absolute
+                            font-size: 48px
+                            color: #EE6C8A
+                .contac
+                    width: 100%
+                    height: 30%
+                    background-color: #fff
+                    border-radius: 30px
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    box-sizing: border-box
+                    padding: 40px 20px
+                    &:hover
+                        cursor: pointer
+                    h4
+                        +font(16px,400,19px,1.8px,#262626)
+                    h3
+                        +font(32px,700,39px,3.36px,#26C6D0)
+                        position: relative
+                        span
+                            left: 160px
+                            bottom: 5px
+                            position: absolute
+                            font-size: 48px
+                            color: #EE6C8A
+    @keyframes opain
+        0%
+            opacity: 0
+        100%
+            opacity: 1
+    @keyframes opaout
+        0%
+            opacity: 1
+        100%
+            opacity: 0
+    @keyframes aside
+        0%
+            opacity: 0
+            transform: translateY(100px)
+        100%
+            opacity: 1
+            transform: translateY(0px)
+    @keyframes asidego
+        0%
+            opacity: 1
+            transform: translateY(0px)
+        100%
+            opacity: 0
+            transform: translateY(100px)
     .headinner
         width: 100%
         padding: 0px 60px
         display: flex
         justify-content: space-between
+        .bre
+            z-index: 1
+            position: absolute
+            left: 0px
+            top: 50%
+            transform: translateY(-50%)
+            padding-left: 60px
+            img
+                width: 85%
         .logo
             &:hover
                 cursor: pointer
@@ -34,6 +307,8 @@
         .start
             display: flex
             align-items: center
+            .startbtn.close
+                transform: scale(0)
             .startbtn
                 display: flex
                 justify-content: center
@@ -48,7 +323,10 @@
                 font-size: 14px
                 letter-spacing: 1.14px
                 text-align: center
+                transition: 0.3s
+                transform: scale(1)
                 &:hover
+                    box-shadow: 0px 1px 10px rgba(#000,0.2)
                     cursor: pointer
             .hamber
                 margin: 0 20px
@@ -120,7 +398,7 @@
             box-sizing: border-box
             padding:10% 60px 0px 60px
             left: 50%
-            transform: translate(-50%,0%)
+            transform: translate(-55%,0%)
             width: 100%
             max-width: 1020px
             .mark
@@ -244,7 +522,18 @@
             line-height: 28px
             text-align: center
             margin: 30px 0px
+        .more::after
+            content: ""
+            position: absolute
+            background-color: #35355a
+            width: 223px
+            height: 0px
+            z-index: -1
+            left: 0
+            transition: 0.3s
         .more
+            z-index: 1
+            position: relative
             margin: auto
             width: 223px
             height: 86px
@@ -252,6 +541,8 @@
             display: flex
             align-items: center
             justify-content: space-evenly
+            &:hover::after
+                height: 86px
             &:hover
                 cursor: pointer
             p
@@ -345,7 +636,18 @@
             text-align: center
             letter-spacing: 1px
             line-height: 28px
+        .more::after
+            content: ""
+            position: absolute
+            background-color: #35355a
+            width: 294px
+            height: 0px
+            z-index: -1
+            left: 0
+            transition: 0.3s
         .more
+            z-index: 1
+            position: relative
             margin: auto
             width: 294px
             height: 92px
@@ -353,6 +655,8 @@
             display: flex
             align-items: center
             justify-content: space-evenly
+            &:hover::after
+                height: 92px
             &:hover
                 cursor: pointer
             p
@@ -411,8 +715,11 @@
                     font-weight: 700
                     font-size: 14px
                     letter-spacing: 2.22px
+                    transition: 0.3s
                     &:hover
                         cursor: pointer
+                        background-color: #fff
+                        color: #26C6D0
         .morev
             position: relative
             margin-top: 150px
@@ -540,9 +847,13 @@
                 width: 100%
 .banner
     width: 100%
+    height: 100vh
     position: relative
     overflow: hidden
     border-radius: 0px 0px 50px 50px
+    display: flex
+    align-items: center
+    padding: 200px 0px
     .bannerimg
         position: absolute
         top: 50%
@@ -550,14 +861,12 @@
         transform: translate(-50%,-50%)
         width: 105%
         height: 105%
-        background: url(../image/LPfb.png)
         background-blend-mode: normal, multiply
         background-size: cover
         background-position: center
         filter: blur(10px) brightness(0.25)
         z-index: -1
     .bannerinner
-        padding: 200px 0px
         margin: auto
         width: 100%
         max-width: 1040px
@@ -569,23 +878,31 @@
             border-radius: 100%
             top: 50%
             position: absolute
+            transition: 0.3s
             transform: translateX(-200%) translateY(-50%)
             left: 0
             img
                 width: 100%
             &:hover
+                transform: translateX(-200%) translateY(-50%) scale(105%)
                 cursor: pointer
+            &:active
+                transform: translateX(-200%) translateY(-50%) scale(90%)
         .arrowr
             background-color: #26C6D0
             border-radius: 100%
             position: absolute
             top: 50%
+            transition: 0.3s
             transform: translate(200%,-50%) rotate(180deg)
             right: 0
             img
                 width: 100%
             &:hover
+                transform: translate(200%,-50%) rotate(180deg) scale(105%)
                 cursor: pointer
+            &:active
+                transform: translate(200%,-50%) rotate(180deg) scale(90%)
         .math
             position: absolute
             right: -100px
@@ -598,15 +915,15 @@
             .numm
                 transform: rotate(45deg)
                 width: 1px
-                height: 35px
-                background-color: #fff
+                height: 40px
+                background-color: #26C6D0
             .numf
-                padding-right: 10px
+                padding-right: 5px
                 display: flex
                 align-items: flex-start
                 color: #fff
             .numl
-                padding-left: 10px
+                padding-left: 5px
                 display: flex
                 align-items: flex-end
                 color: #fff
@@ -618,7 +935,17 @@
             img
                 border-radius: 40px
                 width: 100%
+            .more::after
+                content: ""
+                position: absolute
+                background-color: #35355a
+                width: 300px
+                height: 0px
+                z-index: -1
+                left: 0
+                transition: 0.3s
             .more
+                z-index: 1
                 position: absolute
                 right: -60px
                 bottom: -90px
@@ -628,6 +955,9 @@
                 display: flex
                 align-items: center
                 justify-content: space-evenly
+                transition: 0.3s
+                &:hover::after
+                    height: 140px
                 &:hover
                     cursor: pointer
                 p
@@ -682,7 +1012,39 @@
                 line-height: 24px
                 letter-spacing: 2px
                 color: #fff
-
-
+@keyframes more
+    0%
+        width: 0
+    100%
+        width: 300px
+@keyframes right
+    0%
+        opacity: 1
+        transform: translateX(0px)
+    100%
+        opacity: 0
+        transform: translateX(50px)
+@keyframes rightin
+    0%
+        opacity: 0
+        transform: translateX(-50px)
+    100%
+        opacity: 1
+        transform: translateX(0px)
+@keyframes back
+    0%
+        transform: translate(-50%,-50%) scale(100%)
+    100%
+        transform: translate(-50%,-50%) scale(102%)
+@keyframes backin
+    0%
+        transform: translate(-50%,-50%) scale(102%)
+    100%
+        transform: translate(-50%,-50%) scale(100%)
+@keyframes backmode
+    0%
+        transform: translate(-50%,-50%) scale(10%)
+    100%
+        transform: translate(-50%,-50%) scale(110%)
 
 

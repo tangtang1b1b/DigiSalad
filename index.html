@@ -13,12 +13,47 @@
 <body>
     <div id="App">
         <header class="head">
+            <div class="list">
+                <div class="listinner">
+                    <div class="lil">
+                        <div class="abus aside">
+                            <h4>EMPOWERING BRANDS</h4>
+                            <h3>ABOUT US<span>&nbsp.</span></h3>
+                        </div>
+                        <div class="work aside">
+                            <h4>CASE STUDIES</h4>
+                            <h3>WORKS<span>&nbsp.</span></h3>
+                        </div>
+                    </div>
+                    <div class="lim">
+                        <div class="caree aside">
+                            <h4>BE COOL WITH US</h4>
+                            <h3>CAREERS<span>&nbsp.</span></h3>
+                        </div>
+                        <div class="insig aside">
+                            <h4>OUR STRATEGIES</h4>
+                            <h3>INSIGHTS<span>&nbsp.</span></h3>
+                        </div>
+                    </div>
+                    <div class="lir">
+                        <div class="serv aside">
+                            <h4>AREAS OF EXPERTISE</h4>
+                            <h3>SERVICES<span>&nbsp.</span></h3>
+                        </div>
+                        <div class="contac aside">
+                            <h4>START YOUR JOURNEY WITH US</h4>
+                            <h3>CONTACT<span>&nbsp.</span></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="headinner">
                 <div class="logo">
-                    <h1 v-show="open" class="logoinner">
-                        <img src="./image/Frame.svg" alt="logo">
+                    <h1 class="logoinner">
+                        <img v-show="open" src="./image/Frame.svg" alt="logo">
                     </h1>
                 </div>
+                <div class="bre"><img v-show="!check" src="./image/logosw.svg" alt="logo"></div>
                 <div class="start">
                     <button class="startbtn">START YOUR PROJECT</button>
                     <div class="hamber" @click="hamber">
@@ -120,12 +155,12 @@
             </div>
         </section>
         <section class="banner">
-            <div class="bannerimg"></div>
+            <div class="bannerimg" :style="{backgroundImage: `url(./image/${count}.png)`}"></div>
             <div class="bannerinner">
-                <div class="arrowl">
+                <div class="arrowl" @click="left">
                     <img src="./image/next.svg" alt="">
                 </div>
-                <div class="arrowr">
+                <div class="arrowr" @click="right">
                     <img src="./image/next.svg" alt="">
                 </div>
                 <div class="math">
@@ -134,7 +169,7 @@
                     <div class="numl">04</div>
                 </div>
                 <div class="product">
-                    <img src="./image/LPfb.png" alt="">
+                    <img :src=`./image/${count}.png` alt="">
                     <div class="more">
                         <p>VIEW PROJECT</p>
                         <div class="path"></div>
@@ -145,7 +180,6 @@
                     <h2>LP CLUB MOBILE APP<span>.</span>
                         <div class="subt"></div>
                     </h2>
-                    
                     <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consectetur, eros et vulputate euismod, nunc leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis molestie faucibus.</p>
                 </div>
             </div>

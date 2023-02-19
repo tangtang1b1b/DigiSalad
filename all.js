@@ -1,8 +1,9 @@
 
-
 const vm = Vue.createApp({
     data(){
         return{
+            do:0,
+            count:1,
             check:true,
             open:false,
             imgs:['./image/asia.svg','./image/asia.svg','./image/asia.svg','./image/asia.svg'],
@@ -38,8 +39,27 @@ const vm = Vue.createApp({
             });
         },
         hamber(){
+            let head = document.querySelector(".head");
             let hamber = document.querySelectorAll(".hamber .path");
+            let list = document.querySelector(".list");
+            let aside = document.querySelectorAll(".aside");
+            let startbtn = document.querySelector(".startbtn");
             if(this.check==true){
+                this.do++;
+                head.style.backgroundColor="transparent";
+                this.open=false;
+                hamber.forEach(v=>{
+                    v.style.backgroundColor="white";
+                })
+                startbtn.classList.add("close");
+                list.style.display="block";
+                list.style.animation="opain 0.3s both";
+                aside[0].style.animation="aside 0.3s both";
+                aside[1].style.animation="aside 0.3s 0.05s both";
+                aside[2].style.animation="aside 0.3s 0.13s both";
+                aside[3].style.animation="aside 0.3s 0.16s both";
+                aside[4].style.animation="aside 0.3s 0.19s both";
+                aside[5].style.animation="aside 0.3s 0.22s both";
                 hamber[2].style.width="0px";
                 hamber[0].style.top="9px";
                 setTimeout(()=>{
@@ -48,18 +68,87 @@ const vm = Vue.createApp({
                 },300);
                 this.check=false;
             }else{
+                this.do++;
+                this.open=true;
+                if(window.scrollY==0){
+                    hamber.forEach(v=>{
+                        v.style.backgroundColor="#fff";
+                    })
+                }
+                else if(window.scrollY>0){
+                    head.style.backgroundColor="white";
+                    hamber.forEach(v=>{
+                        v.style.backgroundColor="#414042";
+                    })
+                }
+                // head.style.backgroundColor="white";
+                startbtn.classList.remove("close");
+                list.style.animation="opaout 0.5s both";
+                aside[0].style.animation="asidego 0.3s both";
+                aside[1].style.animation="asidego 0.3s 0.05s both";
+                aside[2].style.animation="asidego 0.3s 0.13s both";
+                aside[3].style.animation="asidego 0.3s 0.16s both";
+                aside[4].style.animation="asidego 0.3s 0.19s both";
+                aside[5].style.animation="asidego 0.3s 0.22s both";
                 hamber[0].style.transform="rotate(0deg)";
                 hamber[1].style.transform="rotate(0deg)";
                 setTimeout(()=>{
+                    list.style.display="none";
                     hamber[2].style.width="26px";
                     hamber[0].style.top="0px";
-                },300);
+                },500);
                 this.check=true;
+            }
+        },
+        right(){
+            let bannerimg = document.querySelector(".bannerimg");
+            let numf = document.querySelector(".numf");
+            let product = document.querySelector(".product");
+            let protro = document.querySelector(".protro");
+            if(this.count<=4){
+                bannerimg.style.animation="back 0.3s both";
+                product.style.animation="right 0.1s both";
+                protro.style.animation="right 0.1s 0.1s both";
+                setTimeout(()=>{
+                    this.count+=1;
+                    numf.innerText = '0'+this.count;
+                    product.style.animation="rightin 0.1s 0.1s both";
+                    protro.style.animation="rightin 0.1s 0.2s both";
+                    bannerimg.style.animation="backin 0.3s both";
+                    if(this.count==5){
+                        this.count=1;
+                        numf.innerText = '0'+this.count;
+                    }
+                },300);
+            }
+        },
+        left(){
+            let bannerimg = document.querySelector(".bannerimg");
+            let numf = document.querySelector(".numf");
+            let product = document.querySelector(".product");
+            let protro = document.querySelector(".protro");
+            if(this.count>=1){
+                bannerimg.style.animation="back 0.3s both";
+                product.style.animation="right 0.1s both";
+                protro.style.animation="right 0.1s 0.1s both";
+                setTimeout(()=>{
+                    this.count-=1;
+                    numf.innerText = '0'+this.count;
+                    product.style.animation="rightin 0.1s 0.1s both";
+                    protro.style.animation="rightin 0.1s 0.2s both";
+                    bannerimg.style.animation="backin 0.3s both";
+                    if(this.count==0){
+                        this.count=4;
+                        numf.innerText = '0'+this.count;
+                    }
+                },300);
             }
         },
     },
     mounted(){
-        this.view();
+        if(this.do%2==0){
+            this.view();
+        }
     },
 });
 vm.mount("#App");
