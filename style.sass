@@ -23,6 +23,33 @@
     display: flex
     align-items: center
     transition: 0.3s
+    .salad
+        position: fixed
+        z-index: 55
+        top: 0
+        width: 100vw
+        height: 100vh
+        background-color: #fff
+        animation: bye 1s 2s both
+        img
+            position: fixed
+            top: 50%
+            left: 50%
+            transform: translate(-50%,-50%)
+            width: 50%
+            animation: byebye 1s 1.5s both
+    @keyframes bye
+        0%
+            opacity: 1
+        100%
+            opacity: 0
+    @keyframes byebye
+        0%
+            width: 50%
+            transform: translate(-50%,-50%)
+        100%
+            width: 12%
+            transform: translate(-248%,-260%)
     .list
         display: none
         position: absolute
@@ -437,9 +464,15 @@
                 bottom: 18px
                 left: 60px
                 background-color: #26C6D0
-                width: 570px
+                width: 0px
                 height: 8px
                 z-index: -1
+                animation: go 1s 2.5s both
+            @keyframes go
+                0%
+                    width: 0
+                100%
+                    width: 570px
         .introinner::before
             content: "DIGITAL AGENCY"
             position: absolute
