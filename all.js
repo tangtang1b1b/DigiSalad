@@ -13,6 +13,12 @@ const vm = Vue.createApp({
         }
     },
     methods: {
+        bye(){
+            let salad = document.querySelector(".salad");
+            setTimeout(()=>{
+                salad.style.display="none";
+            },3000);
+        },
         view(){
             let head = document.querySelector(".head");
             let hamber = document.querySelectorAll(".hamber .path");
@@ -146,6 +152,7 @@ const vm = Vue.createApp({
         },
     },
     mounted(){
+        this.bye();
         if(this.do%2==0){
             this.view();
         }
