@@ -67,9 +67,11 @@
   align-items: center;
   box-sizing: border-box;
   padding: 40px 20px;
+  transition: 0.3s;
 }
 .head .list .listinner .lil .abus:hover {
   cursor: pointer;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 .head .list .listinner .lil .abus h4 {
   font-size: 16px;
@@ -116,9 +118,11 @@
   justify-content: flex-end;
   box-sizing: border-box;
   padding: 40px 20px;
+  transition: 0.3s;
 }
 .head .list .listinner .lil .work:hover {
   cursor: pointer;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 .head .list .listinner .lil .work h4 {
   font-size: 16px;
@@ -173,8 +177,10 @@
   justify-content: flex-end;
   box-sizing: border-box;
   padding: 40px 20px;
+  transition: 0.3s;
 }
 .head .list .listinner .lim .caree:hover {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 .head .list .listinner .lim .caree h4 {
@@ -222,8 +228,10 @@
   justify-content: flex-end;
   box-sizing: border-box;
   padding: 40px 20px;
+  transition: 0.3s;
 }
 .head .list .listinner .lim .insig:hover {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 .head .list .listinner .lim .insig h4 {
@@ -278,8 +286,10 @@
   justify-content: flex-end;
   box-sizing: border-box;
   padding: 40px 20px;
+  transition: 0.3s;
 }
 .head .list .listinner .lir .serv:hover {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 .head .list .listinner .lir .serv h4 {
@@ -314,8 +324,10 @@
   justify-content: center;
   box-sizing: border-box;
   padding: 40px 20px;
+  transition: 0.3s;
 }
 .head .list .listinner .lir .contac:hover {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 .head .list .listinner .lir .contac h4 {
