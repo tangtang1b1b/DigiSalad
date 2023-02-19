@@ -45,6 +45,7 @@ const vm = Vue.createApp({
             });
         },
         hamber(){
+            let logo = document.querySelector(".logoinner");
             let head = document.querySelector(".head");
             let hamber = document.querySelectorAll(".hamber .path");
             let list = document.querySelector(".list");
@@ -77,6 +78,7 @@ const vm = Vue.createApp({
                 this.do++;
                 this.open=true;
                 if(window.scrollY==0){
+                    logo.style.opacity=0;
                     hamber.forEach(v=>{
                         v.style.backgroundColor="#fff";
                     })
