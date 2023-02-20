@@ -125,26 +125,16 @@ window.addEventListener("load",()=>{
                 let product = document.querySelector(".product");
                 let protro = document.querySelector(".protro");
                 if(this.count<=4){
-                    product.style.animation="right 0.3s both";
-                    protro.style.animation="right 0.3s 0.1s both";
+                    product.style.animation="right 0.3s forwards";
+                    protro.style.animation="right 0.3s 0.1s forwards";
                     setTimeout(()=>{
                         this.count+=1;
-                        product.innerHTML=`<img src='./image/${this.count}.png' alt=''>
-                                            <div class="more">
-                                                <p>VIEW PROJECT</p>
-                                                <div class="path"></div>
-                                            </div>`;
                         numf.innerText = '0'+this.count;
                         product.style.animation="rightin 0.3s 0.1s both";
                         protro.style.animation="rightin 0.3s 0.2s both";
                         bannerimg.style.animation="backin 20s infinite";
                         if(this.count==5){
                             this.count=1;
-                            product.innerHTML=`<img src='./image/${this.count}.png' alt=''>
-                            <div class="more">
-                                <p>VIEW PROJECT</p>
-                                <div class="path"></div>
-                            </div>`;
                             numf.innerText = '0'+this.count;
                         }
                     },300);
@@ -156,26 +146,16 @@ window.addEventListener("load",()=>{
                 let product = document.querySelector(".product");
                 let protro = document.querySelector(".protro");
                 if(this.count>=1){
-                    product.style.animation="right 0.3s both";
-                    protro.style.animation="right 0.3s 0.1s both";
+                    product.style.animation="right 0.3s forwards";
+                    protro.style.animation="right 0.3s 0.1s forwards";
                     setTimeout(()=>{
                         this.count-=1;
-                        product.innerHTML=`<img src='./image/${this.count}.png' alt=''>
-                        <div class="more">
-                            <p>VIEW PROJECT</p>
-                            <div class="path"></div>
-                        </div>`;
                         numf.innerText = '0'+this.count;
                         product.style.animation="rightin 0.3s 0.1s both";
                         protro.style.animation="rightin 0.3s 0.2s both";
                         bannerimg.style.animation="backin 20s infinite";
                         if(this.count==0){
                             this.count=4;
-                            product.innerHTML=`<img src='./image/${this.count}.png' alt=''>
-                            <div class="more">
-                                <p>VIEW PROJECT</p>
-                                <div class="path"></div>
-                            </div>`;
                             numf.innerText = '0'+this.count;
                         }
                     },300);
