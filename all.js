@@ -24,7 +24,7 @@ const vm = Vue.createApp({
             let hamber = document.querySelectorAll(".hamber .path");
             let logo = document.querySelector(".logoinner");
             window.addEventListener("scroll",()=>{
-                if(window.scrollY > 0){
+                if(window.scrollY > 0 && this.do%2==0){
                     head.style.backgroundColor="white";
                     hamber.forEach(v=>{
                         v.style.backgroundColor="#414042";
@@ -84,6 +84,7 @@ const vm = Vue.createApp({
                     })
                 }
                 else if(window.scrollY>0){
+                    logo.style.animation="logo 0.3s both";
                     head.style.backgroundColor="white";
                     hamber.forEach(v=>{
                         v.style.backgroundColor="#414042";
@@ -114,15 +115,14 @@ const vm = Vue.createApp({
             let product = document.querySelector(".product");
             let protro = document.querySelector(".protro");
             if(this.count<=4){
-                bannerimg.style.animation="back 0.3s both";
-                product.style.animation="right 0.1s both";
-                protro.style.animation="right 0.1s 0.1s both";
+                product.style.animation="right 0.3s both";
+                protro.style.animation="right 0.3s 0.1s both";
                 setTimeout(()=>{
                     this.count+=1;
                     numf.innerText = '0'+this.count;
-                    product.style.animation="rightin 0.1s 0.1s both";
-                    protro.style.animation="rightin 0.1s 0.2s both";
-                    bannerimg.style.animation="backin 0.3s both";
+                    product.style.animation="rightin 0.3s 0.1s both";
+                    protro.style.animation="rightin 0.3s 0.2s both";
+                    bannerimg.style.animation="backin 20s infinite";
                     if(this.count==5){
                         this.count=1;
                         numf.innerText = '0'+this.count;
@@ -136,15 +136,14 @@ const vm = Vue.createApp({
             let product = document.querySelector(".product");
             let protro = document.querySelector(".protro");
             if(this.count>=1){
-                bannerimg.style.animation="back 0.3s both";
-                product.style.animation="right 0.1s both";
-                protro.style.animation="right 0.1s 0.1s both";
+                product.style.animation="right 0.3s both";
+                protro.style.animation="right 0.3s 0.1s both";
                 setTimeout(()=>{
                     this.count-=1;
                     numf.innerText = '0'+this.count;
-                    product.style.animation="rightin 0.1s 0.1s both";
-                    protro.style.animation="rightin 0.1s 0.2s both";
-                    bannerimg.style.animation="backin 0.3s both";
+                    product.style.animation="rightin 0.3s 0.1s both";
+                    protro.style.animation="rightin 0.3s 0.2s both";
+                    bannerimg.style.animation="backin 20s infinite";
                     if(this.count==0){
                         this.count=4;
                         numf.innerText = '0'+this.count;
@@ -155,9 +154,7 @@ const vm = Vue.createApp({
     },
     mounted(){
         this.bye();
-        if(this.do%2==0){
-            this.view();
-        }
+        this.view();
     },
 });
 vm.mount("#App");

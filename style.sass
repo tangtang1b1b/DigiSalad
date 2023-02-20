@@ -1,3 +1,9 @@
+@mixin phone()
+    @media screen and ( max-width: 768px )
+        @content
+@mixin pad()
+    @media screen and ( max-width: 1024px )
+        @content
 @mixin font($fz,$fw,$lh,$ls,$color)
     font-size: $fz
     font-weight: $fw
@@ -19,7 +25,7 @@
     top: 0
     z-index: 999
     width: 100%
-    height: 100px
+    padding: 20px 0px
     display: flex
     align-items: center
     transition: 0.3s
@@ -31,6 +37,10 @@
         height: 100vh
         background-color: #fff
         animation: bye 1s 2s both
+        +pad
+            display: none
+        +phone 
+            display: none
         img
             position: fixed
             top: 50%
@@ -364,6 +374,8 @@
                 text-align: center
                 transition: 0.3s
                 transform: scale(1)
+                +phone 
+                    display: none
                 &:hover
                     box-shadow: 0px 1px 10px rgba(#000,0.2)
                     cursor: pointer
@@ -417,11 +429,11 @@
         box-sizing: border-box
         padding-bottom: 56.25%
         width: 100%
-        height: 100%
-        max-height: 940px
+        height: 100vh
         border-radius: 0px 0px 50px 50px
         overflow: hidden
-        object-fit: cover
+        +phone 
+            padding-bottom: 133%
         iframe
             z-index: -1
             position: absolute
@@ -440,10 +452,16 @@
             transform: translate(-55%,0%)
             width: 100%
             max-width: 1020px
+            +phone 
+                transform: translate(-50%,0%)
+                padding:50% 0px 0px 0px
             .mark
                 width: 200px
+                +phone 
+                    display: none
                 img
                     width: 100%
+
             .crea
                 font: Proxima Nova
                 color: #fff 
@@ -451,6 +469,8 @@
                 font-weight: 700
                 letter-spacing: 9.17px
                 line-height: 70px
+                +phone 
+                    text-align: center
             .crea::before
                 content: "."
                 position: absolute
@@ -458,6 +478,8 @@
                 left: 635px
                 font-size: 60px
                 color: #EE6C8A
+                +phone 
+                    display: none
             .crea::after
                 content: ""
                 position: absolute
@@ -468,6 +490,8 @@
                 height: 8px
                 z-index: -1
                 animation: go 1s 2.5s both
+                +phone 
+                    left: 0px
             @keyframes go
                 0%
                     width: 0
@@ -536,6 +560,8 @@
             top: 50px
             left: 50%
             transform: translateX(-50%)
+            +phone 
+                display: flex
             img:nth-child(1)
                 transform: translateX(2px)
             img:nth-child(2)
@@ -609,12 +635,26 @@
         display: flex
         box-sizing: border-box
         background-color: #fff
-        width: 1346px
+        width: 100%
+        max-width: 1346px
         padding: 65px
         border-radius: 50px 0px 50px 50px
+        +pad 
+            display: flex
+            flex-direction: column
+        +phone
+            display: block
+            padding: 30px
         .use
             position: relative
             width: 40%
+            +pad
+                width: 100%
+            +phone 
+                display: flex
+                flex-direction: column
+                align-items: center
+                width: 100%
             h2
                 font-weight: 700
                 font-size: 28px
@@ -622,6 +662,8 @@
                 line-height: 34px
                 padding-left: 20px
                 margin-bottom: 60px
+                +phone 
+                    padding-left: 0
             span
                 font-size: 48px
                 color: #EE6C8A
@@ -634,10 +676,24 @@
                 font-size: 16px
                 letter-spacing: 1px
                 line-height: 28px
+                +phone 
+                    text-align: center
         .type
+            display: flex
+            flex-wrap: wrap
             width: 60%
+            +pad
+                width: 100%
+            +phone 
+                width: 100%
+                display: flex
+                justify-content: center
+                flex-direction: column
             img
-                margin: 20px
+                width: 50%
+                paddong: 20px
+                +phone
+                    width: 100%               
 .ingrad
     transform: translateY(-216px)
     width: 100%
@@ -646,10 +702,20 @@
     border-radius: 50px
     display: flex
     justify-content: center
+    +pad 
+        height: 100%
+        padding: 100px 0px
+        transform: translateY(0px)
+    +phone 
+        height: 100%
+        padding: 100px 0px
+        transform: translateY(0px)
     .ingradinner
         padding-top: 316px
         width: 100%
         max-width: 1140px
+        +phone 
+            padding: 30px
         h2          
             font-weight: 700
             font-size: 28px
@@ -667,6 +733,9 @@
             top: 366px
             left: 50%
             transform: translateX(-50%)
+            +phone 
+                top: 80px
+                display: flex
             img:nth-child(1)
                 transform: translateX(2px)
             img:nth-child(2)
@@ -674,13 +743,14 @@
         .morep
             padding-top: 70px
             padding-bottom: 40px
-            width: 1007px
+            max-width: 1007px
             margin: auto
             font-weight: 400
             font-size: 16px
             text-align: center
             letter-spacing: 1px
             line-height: 28px
+            
         .more::after
             content: ""
             position: absolute
@@ -725,6 +795,10 @@
                 justify-content: center
                 align-items: center
                 flex-direction: column
+                +pad 
+                    width: 50%
+                +phone 
+                    width: 100%
                 .lo
                     margin-top: 30px
                     display: flex
@@ -790,21 +864,34 @@
     width: 100%
     display: flex
     justify-content: flex-start
+    +pad 
+        transform: translateY(0px) 
+    +phone 
+        transform: translateY(0px)
     .tonyinner
         z-index: 1
         display: flex
         box-sizing: border-box
         background-image: url(../image/shutterstock.png)
         background-size: cover
-        width: 1346px
+        width: 100%
+        max-width: 1346px
         padding: 100px 65px
         border-radius: 0px 50px 50px 50px
+        +pad
+            padding: 40px 65px
+        +phone
+            display: block
         .use
             position: relative
             width: 40%
             display: flex
             flex-direction: column
             align-items: center
+            +pad 
+                justify-content: center
+            +phone 
+                width: 100%
             .circle
                 width: 204px
                 height: 204px
@@ -831,6 +918,8 @@
                 color: #fff
         .type
             width: 60%
+            +phone 
+                width: 100%
             .bibi
                 width: 90px
                 height: 90px
@@ -843,6 +932,9 @@
                 line-height: 48px
                 letter-spacing: 2px
                 color: #fff
+                +phone 
+                    margin-top: 50px
+                    text-align: center
                 strong
                     color: #FFBC58
 .brand
@@ -850,6 +942,14 @@
     background-color: #fff
     margin-top: -850px
     padding-top: 425px
+    +pad 
+        box-sizing: border-box
+        margin-top: 0
+        padding: 30px
+    +phone 
+        box-sizing: border-box
+        margin-top: 0
+        padding: 30px
     .brandinner
         margin: auto
         width: 100%
@@ -870,7 +970,10 @@
             position: absolute
             left: 50%
             transform: translateX(-50%)
-            img
+            +pad 
+                display: flex
+            +phone 
+                display: flex
             img:nth-child(1)
                 transform: translateX(50px)
             img:nth-child(2)
@@ -911,6 +1014,7 @@
         background-position: center
         filter: blur(10px) brightness(0.25)
         z-index: -1
+        animation: backin 20s infinite
     .bannerinner
         margin: auto
         width: 100%
@@ -918,6 +1022,8 @@
         display: flex
         justify-content: center
         position: relative
+        +phone
+            flex-wrap: wrap
         .arrowl
             background-color: #26C6D0
             border-radius: 100%
@@ -976,7 +1082,11 @@
             width: 55%
             position: relative
             box-sizing: border-box
-            padding-right: 20px
+            padding-right: 50px
+            +phone 
+                order: 2
+                padding: 20px
+                width: 100%
             img
                 border-radius: 40px
                 width: 100%
@@ -1001,6 +1111,13 @@
                 align-items: center
                 justify-content: space-evenly
                 transition: 0.3s
+                +phone
+                    right: 0
+                    bottom: 0
+                    top: 100% 
+                    left: 0
+                    margin-left: auto  
+                    margin-right: auto
                 &:hover::after
                     height: 140px
                 &:hover
@@ -1022,6 +1139,8 @@
             box-sizing: border-box
             padding: 10px 10px 10px 40px
             width: 45%
+            +phone 
+                width: 100%
             h3
                 margin-top: 20px
                 font-size: 16px
@@ -1029,6 +1148,8 @@
                 letter-spacing: 2.22px
                 line-height: 19px
                 color: #fff
+                +phone 
+                    text-align: center
             h2
                 margin-top: 20px
                 font-size: 32px
@@ -1037,6 +1158,8 @@
                 line-height: 39px
                 color: #fff
                 position: relative
+                +phone 
+                    text-align: center
                 .subt
                     position: absolute
                     bottom: 6px
@@ -1045,6 +1168,10 @@
                     width: 396px
                     height: 6px
                     background-color: #26C6D0
+                    +phone 
+                        left: -20px
+                        right: 0px
+                        margin: auto
                 span
                     font-size: 48px
                     color: #EE6C8A
@@ -1057,6 +1184,8 @@
                 line-height: 24px
                 letter-spacing: 2px
                 color: #fff
+                +phone 
+                    display: none
 @keyframes more
     0%
         width: 0
@@ -1083,9 +1212,11 @@
         transform: translate(-50%,-50%) scale(102%)
 @keyframes backin
     0%
-        transform: translate(-50%,-50%) scale(102%)
-    100%
+        transform: translate(-50%,-50%) scale(120%)
+    50%
         transform: translate(-50%,-50%) scale(100%)
+    100%
+        transform: translate(-50%,-50%) scale(120%)
 @keyframes backmode
     0%
         transform: translate(-50%,-50%) scale(10%)
