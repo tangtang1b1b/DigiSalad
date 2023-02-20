@@ -2,6 +2,7 @@
 const vm = Vue.createApp({
     data(){
         return{
+            ggs:4,
             do:0,
             count:1,
             check:true,
@@ -161,26 +162,12 @@ const vm = Vue.createApp({
                 },300);
             }
         },
-        run(){
-            let product = document.querySelector(".product");
-            for(let i=1;i<=4;i++){
-                product.innerHTML=`<img src="./image/${i}.png" alt="">
-                                    <div class="more">
-                                        <p>VIEW PROJECT</p>
-                                        <div class="path"></div>
-                                    </div>`;
-                setTimeout(()=>{
-                    product.innerHTML="";
-                    product.innerHTML=`<img src="./image/1.png" alt="">
-                    <div class="more">
-                        <p>VIEW PROJECT</p>
-                        <div class="path"></div>
-                    </div>`;
-                },1500);
-            }
+        showImage(a){
+            return a==this.count
         },
     },
     mounted(){
+        this.showImage();
         this.sidein();
         this.bye();
         this.view();
