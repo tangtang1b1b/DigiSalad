@@ -125,8 +125,8 @@ window.addEventListener("load",()=>{
                 let product = document.querySelector(".product");
                 let protro = document.querySelector(".protro");
                 if(this.count<=4){
-                    product.style.animation="right 0.3s forwards";
-                    protro.style.animation="right 0.3s 0.1s forwards";
+                    product.style.animation="right 0.3s 0.1s forwards";
+                    protro.style.animation="right 0.3s forwards";
                     setTimeout(()=>{
                         this.count+=1;
                         numf.innerText = '0'+this.count;
@@ -146,8 +146,8 @@ window.addEventListener("load",()=>{
                 let product = document.querySelector(".product");
                 let protro = document.querySelector(".protro");
                 if(this.count>=1){
-                    product.style.animation="right 0.3s forwards";
-                    protro.style.animation="right 0.3s 0.1s forwards";
+                    product.style.animation="right 0.3s 0.1s forwards";
+                    protro.style.animation="right 0.3s forwards";
                     setTimeout(()=>{
                         this.count-=1;
                         numf.innerText = '0'+this.count;
@@ -161,8 +161,27 @@ window.addEventListener("load",()=>{
                     },300);
                 }
             },
+            run(){
+                let product = document.querySelector(".product");
+                for(let i=1;i<=4;i++){
+                    product.innerHTML=`<img src="./image/${i}.png" alt="">
+                                        <div class="more">
+                                            <p>VIEW PROJECT</p>
+                                            <div class="path"></div>
+                                        </div>`;
+                    setTimeout(()=>{
+                        product.innerHTML="";
+                        product.innerHTML=`<img src="./image/1.png" alt="">
+                        <div class="more">
+                            <p>VIEW PROJECT</p>
+                            <div class="path"></div>
+                        </div>`;
+                    },1500);
+                }
+            },
         },
         mounted(){
+            this.run();
             this.sidein();
             this.bye();
             this.view();
