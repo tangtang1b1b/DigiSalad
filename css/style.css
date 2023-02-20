@@ -1131,9 +1131,17 @@
   color: #EE6C8A;
   padding-left: 5px;
 }
+.award .awardinner .use .subt.sideinin {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: 0.5s;
+}
 .award .awardinner .use .subt {
   position: absolute;
   top: 50px;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: 0.5s;
 }
 .award .awardinner .use p.sideinin {
   transform: translateY(0px);
@@ -1663,7 +1671,7 @@
 }
 .brand .brandinner .subt.sideinin {
   transform: translate(-50%, 0px);
-  opacity: 0;
+  opacity: 1;
   transition: 0.5s;
 }
 .brand .brandinner .subt {
