@@ -689,11 +689,17 @@
         margin: auto
         position: relative
         +sideout
+        .subt.sideinin
+            transform: translate(-50%,0px)
+            opacity: 1
+            transition: 0.5s
         .subt
             position: absolute
             top: 50px
             left: 50%
-            transform: translateX(-50%)
+            transform: translate(-50%,30px)
+            opacity: 0
+            transition: 0.5s
             +phone 
                 display: flex
             img:nth-child(1)
@@ -702,6 +708,8 @@
                     display: none
             img:nth-child(2)
                 transform: translateX(-2px)
+        h2.sideinin 
+            +sidein
         h2
             font-size: 28px
             font-weight: 700
@@ -710,6 +718,7 @@
             text-align: center
             padding-bottom: 100px
             background-color: #E5E5E5
+            +sideout
             +phone 
                 font-size: 22px
             span
@@ -747,7 +756,7 @@
             left: 0
             transition: 0.3s
         .more.sideinin
-            // +sidein
+            +sidein
         .more
             z-index: 1
             position: relative
@@ -758,7 +767,7 @@
             display: flex
             align-items: center
             justify-content: space-evenly
-            // +sideout
+            +sideout
             &:hover::after
                 height: 86px
             &:hover

@@ -80,8 +80,8 @@
         </div>
         <section id="intro" class="about">
             <div class="aboutinner sidein">
-                <h2>&nbspABOUT DIGISALAD<span>&nbsp.</span></h2>
-                <div class="subt">
+                <h2 class="sidein">&nbspABOUT DIGISALAD<span>&nbsp.</span></h2>
+                <div class="subt sidein">
                     <img src="./image/about1.svg" alt=""><img src="./image/about2.svg" alt="">
                 </div>
                 <div class="video sidein">
@@ -156,7 +156,7 @@
             </div>
         </section>
         <section class="banner">
-            <div class="bannerimg" :style="{backgroundImage: `url(./image/${count}.png)`}"></div>
+            <div class="bannerimg" v-for="gg in ggs" v-show="showImage(gg)" :style="{backgroundImage: `url(./image/${count}.png)`}"></div>
             <div class="bannerinner">
                 <div class="math">
                     <div class="numf">01</div>
