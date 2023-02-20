@@ -79,17 +79,17 @@
             <p>TASTE US NOW!</p>
         </div>
         <section id="intro" class="about">
-            <div class="aboutinner">
+            <div class="aboutinner sidein">
                 <h2>&nbspABOUT DIGISALAD<span>&nbsp.</span></h2>
                 <div class="subt">
                     <img src="./image/about1.svg" alt=""><img src="./image/about2.svg" alt="">
                 </div>
-                <div class="video">
+                <div class="video sidein">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/IeIRJ9jZ5Ro?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
-                <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consectetur, eros et vulputate euismod, nunc leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis molestie faucibus.</p>
-                <div class="more">
-                    <p>VIEW MORE</p>
+                <p class="sidein">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consectetur, eros et vulputate euismod, nunc leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis molestie faucibus.</p>
+                <div class="more sidein">
+                    <p class="sidein">VIEW MORE</p>
                     <div class="path"></div>
                 </div>
             </div>
@@ -97,47 +97,47 @@
         <section class="award">
             <div class="awardinner">
                 <div class="use">
-                    <h2>AWARDS<span>.</span></h2>
-                    <div class="subt">
+                    <h2 class="sidein">AWARDS<span>.</span></h2>
+                    <div class="subt sidein">
                         <img src="./image/about1.svg" alt="">
                     </div>
-                    <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. </p>
+                    <p class="sidein">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. </p>
                 </div>
                 <div class="type">
-                    <img v-for="img in imgs" :key="img" :src="img" alt="">
+                    <img class="sidein" v-for="img in imgs" :key="img" :src="img" alt="">
                 </div>
             </div>
         </section>
         <section class="ingrad">
-            <div class="ingradinner">
-                <h2>OUR INGRADIENTS<span>.</span></h2>
-                <div class="subt">
+            <div class="ingradinner sidein">
+                <h2 class="sidein">OUR INGRADIENTS<span>.</span></h2>
+                <div class="subt sidein">
                     <img src="./image/our1.svg" alt=""><img src="./image/our2.svg" alt="">
                 </div>
-                <p class="morep">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consectetur, eros et vulputate euismod, nunc leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis molestie faucibus.</p>
-                <div class="more">
+                <p class="morep sidein">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consectetur, eros et vulputate euismod, nunc leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis molestie faucibus.</p>
+                <div class="more sidein">
                     <p>OUR SERVICES</p>
                     <div class="path"></div>
                 </div>
                 <div class="design">
-                    <div class="designinner" v-for="card in cards" :key="card">
+                    <div class="designinner sidein" v-for="card in cards" :key="card">
                         <div class="lo"><img :src="`./image/${card['logo']}.svg`" alt="圖案"></div>
                         <h3>{{card['h3']}}</h3>
                         <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare.</p>
                         <div class="view">VIEW MORE</div>
                     </div>
                 </div>
-                <p class="morev">VIEW MORE DIGISALAD’S INGRADIENTS</p>
+                <p class="morev sidein">VIEW MORE DIGISALAD’S INGRADIENTS</p>
             </div>
         </section> 
         <section class="tony">
             <div class="tonyinner">
-                <div class="use">
+                <div class="use sidein">
                     <div class="circle"><img src="./image/human.png" alt=""></div>
                     <h4>TONY NG</h4>
                     <p>Founder & Creative Director</p>
                 </div>
-                <div class="type">
+                <div class="type sidein">
                     <div class="bibi"><img src="./image/quote.svg" alt=""></div>
                     <p>A great digital work isn’t about designing beautiful pages purely. It is about context - how do we deliver the <strong>right experience to the right person at the right time</strong>. The most important thing is that your work can engage customers at anytime, anywhere and let users experience an entire amazing digital journey.</p>
                 </div>
@@ -145,11 +145,11 @@
         </section>
         <section class="brand">
             <div class="brandinner">
-                <h2>OUR BRAND EXPERIENCE<span>.</span></h2>
-                <div class="subt">
+                <h2 class="sidein">OUR BRAND EXPERIENCE<span>.</span></h2>
+                <div class="subt sidein">
                     <img src="./image/about1.svg" alt=""><img src="./image/about1.svg" alt=""><img src="./image/about1.svg" alt="">
                 </div>
-                <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consectetur, eros et vulputate euismod, nunc leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis molestie faucibus.</p>
+                <p class="sidein">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consectetur, eros et vulputate euismod, nunc leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis molestie faucibus.</p>
                 <div class="client">
                     <img src="./image/DigiSalad-Client-List.png" alt="">
                 </div>
@@ -158,12 +158,6 @@
         <section class="banner">
             <div class="bannerimg" :style="{backgroundImage: `url(./image/${count}.png)`}"></div>
             <div class="bannerinner">
-                <!-- <div class="arrowl" @click="left">
-                    <img src="./image/next.svg" alt="">
-                </div>
-                <div class="arrowr" @click="right">
-                    <img src="./image/next.svg" alt="">
-                </div> -->
                 <div class="math">
                     <div class="numf">01</div>
                     <div class="numm"></div>

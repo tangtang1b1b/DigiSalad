@@ -13,6 +13,18 @@ const vm = Vue.createApp({
         }
     },
     methods: {
+        sidein(){
+            let sidein = document.querySelectorAll(".sidein");
+            window.addEventListener("scroll",()=>{
+                sidein.forEach((v,i)=>{
+                    let dtop = v.getBoundingClientRect().top;
+                    if(dtop<window.innerHeight){
+                        sidein[i].classList.add("sideinin");
+                        // v.classList.add("sidego");
+                    }
+                })
+            });
+        },
         bye(){
             let salad = document.querySelector(".salad");
             setTimeout(()=>{
@@ -153,6 +165,7 @@ const vm = Vue.createApp({
         },
     },
     mounted(){
+        this.sidein();
         this.bye();
         this.view();
     },

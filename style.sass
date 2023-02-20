@@ -10,7 +10,15 @@
     line-height: $lh
     letter-spacing: $ls
     color: $color
-    
+@mixin sidein()
+    transform: translateY(0px)
+    opacity: 1
+    transition: 0.5s
+@mixin sideout()
+    transform: translateY(30px)
+    opacity: 0
+    transition: 0.5s
+
 *
     font-family: Proxima-Nova
     font-style: normal
@@ -25,11 +33,12 @@
     top: 0
     z-index: 999
     width: 100%
-    // padding: 20px 0px
     height: 100px
     display: flex
     align-items: center
     transition: 0.3s
+    +phone 
+        height: 70px
     .salad
         position: fixed
         z-index: 55
@@ -95,10 +104,12 @@
                 justify-content: space-evenly
                 position: relative
                 +pad 
+                    align-items: center
                     width: 100%
                     flex-direction: row
                     height: 33.333333%
                 +phone
+                    margin-bottom: 10px
                     width: 100%
                     flex-direction: column
                     height: 33.333333%
@@ -130,7 +141,8 @@
                     +pad 
                         width: 45%    
                         height: 90%
-                    +phone 
+                    +phone
+                        margin-bottom: 5px
                         width: 100%
                         height: 50%
                     &:hover
@@ -208,6 +220,7 @@
                     height: 33.333333%
                     justify-content: space-evenly
                 +phone
+                    margin-bottom: 10px
                     justify-content: space-evenly
                     align-items: center
                     width: 100%
@@ -242,6 +255,7 @@
                         width: 45%    
                         height: 90%
                     +phone 
+                        margin-bottom: 5px
                         justify-content: center
                         align-items: center
                         width: 100%
@@ -351,6 +365,7 @@
                         width: 45%    
                         height: 90%
                     +phone 
+                        margin-bottom: 5px
                         justify-content: center
                         align-items: center
                         width: 100%
@@ -627,6 +642,8 @@
     flex-direction: column
     img
         width: 65px
+        border-radius: 100% 
+        animation: bumb 1s infinite
         &:hover
             cursor: pointer
     p
@@ -635,6 +652,11 @@
         font-size: 14px
         letter-spacing: 2px
         color: #fff
+@keyframes bumb
+    0%
+        box-shadow: #fff 0 0 0 0
+    100%
+        box-shadow: #ffffff0f 0 0 0 25px
 .godown::after
     content: ""
     position: absolute
@@ -654,11 +676,14 @@
     background-color: #E5E5E5
     padding: 120px 0px 70px 0px
     width: 100%
+    .aboutinner.sideinin
+        +sidein
     .aboutinner
         width: 100%
         max-width: 960px
         margin: auto
         position: relative
+        +sideout
         .subt
             position: absolute
             top: 50px
@@ -685,15 +710,20 @@
             span
                 font-size: 48px
                 color: #EE6C8A
+        .video.sideinin
+            +sidein
         .video
             position: relative
             width: 100%
             padding-bottom: 56.25%
+            +sideout
             iframe
                 position: absolute
                 width: 100%
                 height: 100%
                 max-height: 544px
+        p.sideinin 
+            +sidein
         p
             font-weight: 400
             font-size: 16px
@@ -701,6 +731,7 @@
             line-height: 28px
             text-align: center
             margin: 30px 0px
+            +sideout
         .more::after
             content: ""
             position: absolute
@@ -710,6 +741,8 @@
             z-index: -1
             left: 0
             transition: 0.3s
+        .more.sideinin
+            // +sidein
         .more
             z-index: 1
             position: relative
@@ -720,6 +753,7 @@
             display: flex
             align-items: center
             justify-content: space-evenly
+            // +sideout
             &:hover::after
                 height: 86px
             &:hover
@@ -763,6 +797,8 @@
                 flex-direction: column
                 align-items: center
                 width: 100%
+            h2.sideinin 
+                +sidein
             h2
                 font-weight: 700
                 font-size: 28px
@@ -770,6 +806,7 @@
                 line-height: 34px
                 padding-left: 20px
                 margin-bottom: 60px
+                +sideout
                 +phone 
                     font-size: 22px
                     padding-left: 0
@@ -780,11 +817,14 @@
             .subt
                 position: absolute
                 top: 50px
+            p.sideinin 
+                +sidein
             p
                 font-weight: 400
                 font-size: 16px
                 letter-spacing: 1px
                 line-height: 28px
+                +sideout
                 +phone 
                     text-align: center
         .type
@@ -798,9 +838,12 @@
                 display: flex
                 justify-content: center
                 flex-direction: column
+            img.sideinin  
+                +sidein
             img
                 width: 50%
                 paddong: 20px
+                +sideout
                 +phone
                     width: 100%               
 .ingrad
@@ -821,12 +864,17 @@
         box-sizing: border-box
         padding: 100px 20px
         transform: translateY(0px)
+    .ingradinner.sideinin 
+        +sidein
     .ingradinner
         padding-top: 316px
         width: 100%
         max-width: 1140px
+        +sideout
         +phone 
             padding: 30px
+        h2.sideinin 
+            +sidein
         h2          
             font-weight: 700
             font-size: 28px
@@ -835,17 +883,20 @@
             padding-left: 20px
             text-align: center
             color: #fff
+            +sideout
             +phone 
                 font-size: 20px
         span
             font-size: 48px
             color: #EE6C8A
             padding-left: 10px
+        .subt.sideinin 
+            +sidein
         .subt
-            // position: absolute
             top: 366px
-            // left: 50%
-            // transform: translateX(-50%)
+            display: flex
+            justify-content: center
+            +sideout
             +phone 
                 top: 80px
                 display: flex
@@ -859,6 +910,8 @@
                     position: absolute
                     left: 50%
                     transform: translateX(-50%)
+        .morep.sideinin
+            +sidein
         .morep
             padding-top: 70px
             padding-bottom: 40px
@@ -869,7 +922,7 @@
             text-align: center
             letter-spacing: 1px
             line-height: 28px
-            
+            +sideout
         .more::after
             content: ""
             position: absolute
@@ -879,6 +932,8 @@
             z-index: -1
             left: 0
             transition: 0.3s
+        .more.sideinin
+            +sidein
         .more
             z-index: 1
             position: relative
@@ -889,6 +944,7 @@
             display: flex
             align-items: center
             justify-content: space-evenly
+            +sideout
             &:hover::after
                 height: 92px
             &:hover
@@ -907,6 +963,8 @@
             width: 100%
             display: flex
             flex-wrap: wrap
+            .designinner.sideinin 
+                +sidein
             .designinner
                 margin-top: 60px
                 width: 33.333333%
@@ -914,6 +972,7 @@
                 justify-content: center
                 align-items: center
                 flex-direction: column
+                +sideout
                 +pad 
                     width: 50%
                 +phone 
@@ -935,6 +994,7 @@
                     line-height: 24px
                     text-transform: uppercase
                     color: #fff
+                    text-align: center
                 p
                     padding: 0px 20px
                     margin-top: 30px
@@ -958,6 +1018,8 @@
                         cursor: pointer
                         background-color: #fff
                         color: #26C6D0
+        .morev.sideinin 
+            +sidein
         .morev
             position: relative
             margin-top: 150px
@@ -968,6 +1030,7 @@
             text-transform: uppercase
             text-align: center
             color: #fff
+            +sideout
             +phone 
                 font-size: 12px
         .morev::after
@@ -1005,12 +1068,15 @@
             padding: 40px 65px
         +phone
             display: block
+        .use.sideinin
+            +sidein
         .use
             position: relative
             width: 40%
             display: flex
             flex-direction: column
             align-items: center
+            +sideout
             +pad 
                 justify-content: center
             +phone 
@@ -1039,8 +1105,11 @@
                 text-align: center
                 font-style: italic
                 color: #fff
+        .type.sideinin 
+            +sidein
         .type
             width: 60%
+            +sideout
             +phone 
                 width: 100%
             .bibi
@@ -1079,6 +1148,8 @@
         margin: auto
         width: 100%
         max-width: 1000px
+        h2.sideinin 
+            +sidein
         h2          
             margin-top: 50px
             font-weight: 700
@@ -1087,14 +1158,21 @@
             line-height: 34px
             text-align: center
             color: #000
+            +sideout
         span
             font-size: 48px
             color: #EE6C8A
             padding-left: 10px
+        .subt.sideinin
+            transform: translate(-50%,0px)
+            opacity: 0
+            transition: 0.5s
         .subt
             position: absolute
             left: 50%
-            transform: translateX(-50%)
+            transform: translate(-50%,30px)
+            opacity: 0
+            transition: 0.5s
             +pad 
                 display: flex
             +phone 
@@ -1107,6 +1185,8 @@
                 transform: translateX(-63px)
                 +phone 
                     display: none
+        p.sideinin
+            +sidein
         p
             margin-top: 70px
             font-weight: 400
@@ -1115,6 +1195,7 @@
             text-align: center
             letter-spacing: 1px
             color: #262626
+            +sideout
         .client
             width: 100%
             margin-top: 70px
