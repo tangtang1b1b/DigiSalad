@@ -74,21 +74,24 @@
         display: none
         position: absolute
         box-sizing: border-box
-        padding: 80px
+        padding: 0px 60px
         top: 0
         width: 100vw
         height: 100vh
         background-image: url(../image/Rectangle.png)
         background-size: cover
         transition: 0.2s
+        +pad 
+            padding: 80px
         +phone 
             padding: 80px 20px 20px 20px
         .listinner
             margin: auto
-            width: calc( 100vw - 400px )
+            width: 100%
             height: 100%
             display: flex
             justify-content: space-evenly
+            align-items: center
             +pad 
                 width: 100%
                 flex-direction: column
@@ -98,7 +101,7 @@
 
             .lil
                 width: 33.3333%
-                height: calc( 100vh - 150px )
+                height: calc( 100% - 80px )
                 display: flex
                 flex-direction: column
                 justify-content: space-evenly
@@ -109,7 +112,6 @@
                     flex-direction: row
                     height: 33.333333%
                 +phone
-                    // margin-bottom: 10px
                     width: 100%
                     flex-direction: column
                     height: 33.333333%
@@ -121,7 +123,10 @@
                     background-size: cover
                     width: 50px
                     height: 70px
-                    left: 50px
+                    left: 15%
+                    transform: translateX(-70%)
+                    +pad 
+                        display: none
                     +phone 
                         display: none
                 .abus
@@ -141,8 +146,9 @@
                     +pad 
                         width: 45%    
                         height: 90%
+                        justify-content: center
+                        align-items: center
                     +phone
-                        // margin-bottom: 5px
                         width: 100%
                         height: 50%
                     &:hover
@@ -166,13 +172,16 @@
                     background-size: cover
                     width: 60px
                     height: 60px
-                    left: 50px
+                    left: 20%
+                    transform: translateX(-50%)
+                    +pad 
+                        display: none
                     +phone 
                         display: none
                 .work
                     position: relative
                     width: 100%
-                    height: 45%
+                    height: 50%
                     background-color: #EE6C8A
                     background-image: url(../image/ChampionREIT-Showcase.png)
                     background-size: cover
@@ -187,6 +196,8 @@
                     +pad 
                         width: 45%    
                         height: 90%
+                        justify-content: center
+                        align-items: center
                     +phone
                         box-shadow: 0px -3px 5px rgba(#000,0.2)
                         justify-content: center
@@ -209,8 +220,8 @@
                             font-size: 48px
                             color: #26C6D0                 
             .lim
-                width: 30.3333%
-                height: calc( 100vh - 150px )
+                width: 33.3333%
+                height: calc( 100% - 80px )
                 display: flex
                 flex-direction: column
                 justify-content: space-between
@@ -221,7 +232,6 @@
                     height: 33.333333%
                     justify-content: space-evenly
                 +phone
-                    // margin-bottom: 10px
                     justify-content: space-evenly
                     align-items: center
                     width: 100%
@@ -236,11 +246,13 @@
                     height: 45px
                     left: 20px
                     bottom: 120px
+                    +pad 
+                        display: none
                     +phone 
                         display: none
                 .caree
                     position: relative
-                    width: 65%
+                    width: 70%
                     height: 60%
                     background-color: #E6A94E
                     background-image: url(../image/DigiSalad-Promotional-Video-Storyboard-v1-14.png)
@@ -255,8 +267,9 @@
                     +pad 
                         width: 45%    
                         height: 90%
+                        justify-content: center
+                        align-items: center
                     +phone 
-                        // margin-bottom: 5px
                         box-shadow: 0px -3px 5px rgba(#000,0.2)
                         justify-content: center
                         align-items: center
@@ -285,11 +298,13 @@
                     height: 70px
                     left: 30px
                     bottom: 100px
+                    +pad 
+                        display: none
                     +phone 
                         display: none
                 .insig
                     position: relative
-                    width: 65%
+                    width: 70%
                     height: 35%
                     background-color: #26D0A8
                     background-image: url(../image/DigiSalad-Promotional-Video-Storyboard-v1-13.png)
@@ -304,6 +319,8 @@
                     +pad 
                         width: 45%    
                         height: 90%
+                        justify-content: center
+                        align-items: center
                     +phone 
                         box-shadow: 0px -3px 5px rgba(#000,0.2)
                         justify-content: center
@@ -326,7 +343,7 @@
                             color: #EE6C8A
             .lir
                 width: 33.3333%
-                height: calc( 100vh - 150px )
+                height: calc( 100% - 80px )
                 display: flex
                 flex-direction: column
                 justify-content: space-evenly
@@ -348,12 +365,14 @@
                     height: 60px
                     left: 30px
                     bottom: 110px
+                    +pad 
+                        display: none
                     +phone 
                         display: none
                 .serv
                     position: relative
                     width: 100%
-                    height: 45%
+                    height: 50%
                     background-color: #585880
                     background-image: url(../image/DigiSalad-Promotional-Video-Storyboard-v1-24.png)
                     background-size: cover
@@ -367,8 +386,9 @@
                     +pad 
                         width: 45%    
                         height: 90%
+                        justify-content: center
+                        align-items: center
                     +phone 
-                        // margin-bottom: 5px
                         box-shadow: 0px -3px 5px rgba(#000,0.2)
                         justify-content: center
                         align-items: center
@@ -402,6 +422,8 @@
                     +pad 
                         width: 45%
                         height: 90%
+                        justify-content: center
+                        align-items: center
                     +phone 
                         box-shadow: 0px -3px 5px rgba(#000,0.2)
                         justify-content: center
@@ -1285,23 +1307,17 @@
                 background-color: #26C6D0
                 border-radius: 100%
                 top: 50%
-                // position: absolute
                 transition: 0.3s
-                // transform: translateX(-200%) translateY(-50%)
                 left: 0px
                 +phone 
                     display: none
                 img
                     width: 100%
                 &:hover
-                    // transform: translateX(-200%) translateY(-50%) scale(105%)
                     cursor: pointer
-                &:active
-                    // transform: translateX(-200%) translateY(-50%) scale(90%)
             .arrowr
                 background-color: #26C6D0
                 border-radius: 100%
-                // position: absolute
                 top: 50%
                 transition: 0.3s
                 transform: rotate(180deg)
@@ -1310,10 +1326,7 @@
                 img
                     width: 100%
                 &:hover
-                    // transform: translate(200%,-50%) rotate(180deg) scale(105%)
                     cursor: pointer
-                &:active
-                    // transform: translate(200%,-50%) rotate(180deg) scale(90%)
             .box
                 width: 100%
                 display: flex
@@ -1326,7 +1339,6 @@
                     width: 50%
                     position: relative
                     box-sizing: border-box
-                    // padding-right: 50px
                     +pad 
                         order: 2
                         padding: 20px
@@ -1388,7 +1400,6 @@
                     flex-direction: column
                     justify-content: center
                     box-sizing: border-box
-                    // padding: 0px 0px 0px 40px
                     width: 45%
                     +phone 
                         width: 100%
