@@ -1,3 +1,4 @@
+const images = ['./image/1.png','./image/2.png','./image/3.png','./image/4.png'];
 
 const vm = Vue.createApp({
     data(){
@@ -14,6 +15,13 @@ const vm = Vue.createApp({
         }
     },
     methods: {
+        load() {
+            for (let i = 0; i < images.length; i++) {
+                let img = new Image();
+                img.src = images[i];
+                console.log(img.src);
+            }
+        },
         sidein(){
             let sidein = document.querySelectorAll(".sidein");
             window.addEventListener("scroll",()=>{
@@ -167,6 +175,7 @@ const vm = Vue.createApp({
         },
     },
     mounted(){
+        this.load();
         this.showImage();
         this.sidein();
         this.bye();
