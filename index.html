@@ -158,31 +158,41 @@
         <section class="banner">
             <div class="bannerimg" :style="{backgroundImage: `url(./image/${count}.png)`}"></div>
             <div class="bannerinner">
-                <div class="arrowl" @click="left">
+                <!-- <div class="arrowl" @click="left">
                     <img src="./image/next.svg" alt="">
                 </div>
                 <div class="arrowr" @click="right">
                     <img src="./image/next.svg" alt="">
-                </div>
+                </div> -->
                 <div class="math">
                     <div class="numf">01</div>
                     <div class="numm"></div>
                     <div class="numl">04</div>
                 </div>
-                <div class="product">
-                    <img :src=`./image/${count}.png` alt="">
-                    <!-- <img src="./image/1.png" alt=""> -->
-                    <div class="more">
-                        <p>VIEW PROJECT</p>
-                        <div class="path"></div>
+                <div class="middle">
+                    <div class="arrowl" @click="left">
+                        <img src="./image/next.svg" alt="">
                     </div>
-                </div>
-                <div class="protro">
-                    <h3>HIGHLIGHTED SHOWCASE</h3>
-                    <h2>LP CLUB MOBILE APP<span>.</span>
-                        <div class="subt"></div>
-                    </h2>
-                    <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consectetur, eros et vulputate euismod, nunc leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis molestie faucibus.</p>
+                    <div class="box">
+                        <div class="product">
+                            <img :src=`./image/${count}.png` alt="">
+                            <!-- <img src="./image/1.png" alt=""> -->
+                            <div class="more">
+                                <p>VIEW PROJECT</p>
+                                <div class="path"></div>
+                            </div>
+                        </div>
+                        <div class="protro">
+                            <h3>HIGHLIGHTED SHOWCASE</h3>
+                            <h2>LP CLUB MOBILE APP<span>.</span>
+                                <div class="subt"></div>
+                            </h2>
+                            <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consectetur, eros et vulputate euismod, nunc leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis molestie faucibus.</p>
+                        </div>
+                    </div>
+                    <div class="arrowr" @click="right">
+                        <img src="./image/next.svg" alt="">
+                    </div>
                 </div>
             </div>
         </section>

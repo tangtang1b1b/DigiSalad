@@ -25,7 +25,8 @@
     top: 0
     z-index: 999
     width: 100%
-    padding: 20px 0px
+    // padding: 20px 0px
+    height: 100px
     display: flex
     align-items: center
     transition: 0.3s
@@ -334,6 +335,8 @@
         padding: 0px 60px
         display: flex
         justify-content: space-between
+        +phone 
+            padding: 0px 20px
         .bre
             z-index: 1
             position: absolute
@@ -341,6 +344,9 @@
             top: 50%
             transform: translateY(-50%)
             padding-left: 60px
+            +phone 
+                box-sizing: border-box
+                padding: 20px
             img
                 width: 85%
         .logo
@@ -490,8 +496,11 @@
                 height: 8px
                 z-index: -1
                 animation: go 1s 2.5s both
+                +pad 
+                    left: 60px
                 +phone 
-                    left: 0px
+                    left: 50%
+                    transform: translateX(-50%)
             @keyframes go
                 0%
                     width: 0
@@ -515,7 +524,6 @@
             background-color: #fff
             transform: rotate(-90deg)
             top: 420px
-
 .godown
     transform: translateY(-180px)
     display: flex
@@ -564,6 +572,8 @@
                 display: flex
             img:nth-child(1)
                 transform: translateX(2px)
+                +phone 
+                    display: none
             img:nth-child(2)
                 transform: translateX(-2px)
         h2
@@ -574,6 +584,8 @@
             text-align: center
             padding-bottom: 100px
             background-color: #E5E5E5
+            +phone 
+                font-size: 22px
             span
                 font-size: 48px
                 color: #EE6C8A
@@ -663,6 +675,7 @@
                 padding-left: 20px
                 margin-bottom: 60px
                 +phone 
+                    font-size: 22px
                     padding-left: 0
             span
                 font-size: 48px
@@ -704,11 +717,13 @@
     justify-content: center
     +pad 
         height: 100%
-        padding: 100px 0px
+        padding: 100px 20px
         transform: translateY(0px)
+        box-sizing: border-box
     +phone 
         height: 100%
-        padding: 100px 0px
+        box-sizing: border-box
+        padding: 100px 20px
         transform: translateY(0px)
     .ingradinner
         padding-top: 316px
@@ -724,22 +739,30 @@
             padding-left: 20px
             text-align: center
             color: #fff
+            +phone 
+                font-size: 20px
         span
             font-size: 48px
             color: #EE6C8A
             padding-left: 10px
         .subt
-            position: absolute
+            // position: absolute
             top: 366px
-            left: 50%
-            transform: translateX(-50%)
+            // left: 50%
+            // transform: translateX(-50%)
             +phone 
                 top: 80px
                 display: flex
             img:nth-child(1)
                 transform: translateX(2px)
+                +phone 
+                    display: none
             img:nth-child(2)
                 transform: translateX(-2px)
+                +phone 
+                    position: absolute
+                    left: 50%
+                    transform: translateX(-50%)
         .morep
             padding-top: 70px
             padding-bottom: 40px
@@ -849,6 +872,8 @@
             text-transform: uppercase
             text-align: center
             color: #fff
+            +phone 
+                font-size: 12px
         .morev::after
             content: ""
             position: absolute
@@ -859,6 +884,8 @@
             width: 420px
             height: 10px
             z-index: -1
+            +phone 
+                width: 100%
 .tony
     transform: translateY(-500px)
     width: 100%
@@ -933,6 +960,8 @@
                 letter-spacing: 2px
                 color: #fff
                 +phone 
+                    line-height: 24px
+                    font-size: 16px
                     margin-top: 50px
                     text-align: center
                 strong
@@ -980,6 +1009,8 @@
                 transform: translateX(-58px)
             img:nth-child(3)
                 transform: translateX(-63px)
+                +phone 
+                    display: none
         p
             margin-top: 70px
             font-weight: 400
@@ -1022,38 +1053,6 @@
         display: flex
         justify-content: center
         position: relative
-        +phone
-            flex-wrap: wrap
-        .arrowl
-            background-color: #26C6D0
-            border-radius: 100%
-            top: 50%
-            position: absolute
-            transition: 0.3s
-            transform: translateX(-200%) translateY(-50%)
-            left: 0
-            img
-                width: 100%
-            &:hover
-                transform: translateX(-200%) translateY(-50%) scale(105%)
-                cursor: pointer
-            &:active
-                transform: translateX(-200%) translateY(-50%) scale(90%)
-        .arrowr
-            background-color: #26C6D0
-            border-radius: 100%
-            position: absolute
-            top: 50%
-            transition: 0.3s
-            transform: translate(200%,-50%) rotate(180deg)
-            right: 0
-            img
-                width: 100%
-            &:hover
-                transform: translate(200%,-50%) rotate(180deg) scale(105%)
-                cursor: pointer
-            &:active
-                transform: translate(200%,-50%) rotate(180deg) scale(90%)
         .math
             position: absolute
             right: -100px
@@ -1078,114 +1077,186 @@
                 display: flex
                 align-items: flex-end
                 color: #fff
-        .product
-            width: 55%
-            position: relative
-            box-sizing: border-box
-            padding-right: 50px
-            +phone 
-                order: 2
-                padding: 20px
-                width: 100%
-            img
-                border-radius: 40px
-                width: 100%
-            .more::after
-                content: ""
-                position: absolute
-                background-color: #35355a
-                width: 300px
-                height: 0px
-                z-index: -1
-                left: 0
-                transition: 0.3s
-            .more
-                z-index: 1
-                position: absolute
-                right: -60px
-                bottom: -90px
-                width: 300px
-                height: 140px
-                background-color: #585880
-                display: flex
-                align-items: center
-                justify-content: space-evenly
-                transition: 0.3s
-                +phone
-                    right: 0
-                    bottom: 0
-                    top: 100% 
-                    left: 0
-                    margin-left: auto  
-                    margin-right: auto
-                &:hover::after
-                    height: 140px
-                &:hover
-                    cursor: pointer
-                p
-                    font-weight: 700
-                    font-size: 16px
-                    letter-spacing: 2.22px
-                    line-height: 19px
-                    color: #fff
-                .path
-                    width: 70px
-                    height: 2px
-                    background-color: #fff
-        .protro
+        .middle
+            width: 100%
             display: flex
-            flex-direction: column
-            justify-content: center
-            box-sizing: border-box
-            padding: 10px 10px 10px 40px
-            width: 45%
+            align-items: center
+            justify-content: space-between
+            +pad 
+                padding: 20px
             +phone 
-                width: 100%
-            h3
-                margin-top: 20px
-                font-size: 16px
-                font-weight: 700
-                letter-spacing: 2.22px
-                line-height: 19px
-                color: #fff
-                +phone 
-                    text-align: center
-            h2
-                margin-top: 20px
-                font-size: 32px
-                font-weight: 700
-                letter-spacing: 3.63px
-                line-height: 39px
-                color: #fff
-                position: relative
-                +phone 
-                    text-align: center
-                .subt
-                    position: absolute
-                    bottom: 6px
-                    left: -6px
-                    z-index: -1
-                    width: 396px
-                    height: 6px
-                    background-color: #26C6D0
-                    +phone 
-                        left: -20px
-                        right: 0px
-                        margin: auto
-                span
-                    font-size: 48px
-                    color: #EE6C8A
-                    padding-left: 10px
-            p
-                padding: 20px 0px 40px 0px
-                margin-top: 20px
-                font-size: 16px
-                font-weight: 400
-                line-height: 24px
-                letter-spacing: 2px
-                color: #fff
+                padding: 20px
+                flex-direction: column
+            .arrowl
+                background-color: #26C6D0
+                border-radius: 100%
+                top: 50%
+                // position: absolute
+                transition: 0.3s
+                // transform: translateX(-200%) translateY(-50%)
+                left: 0px
                 +phone 
                     display: none
+                img
+                    width: 100%
+                &:hover
+                    // transform: translateX(-200%) translateY(-50%) scale(105%)
+                    cursor: pointer
+                &:active
+                    // transform: translateX(-200%) translateY(-50%) scale(90%)
+            .arrowr
+                background-color: #26C6D0
+                border-radius: 100%
+                // position: absolute
+                top: 50%
+                transition: 0.3s
+                transform: rotate(180deg)
+                right: 0px
+                +phone
+                img
+                    width: 100%
+                &:hover
+                    // transform: translate(200%,-50%) rotate(180deg) scale(105%)
+                    cursor: pointer
+                &:active
+                    // transform: translate(200%,-50%) rotate(180deg) scale(90%)
+            .box
+                width: 100%
+                display: flex
+                justify-content: space-around
+                +pad
+                    flex-wrap: wrap
+                +phone
+                    flex-wrap: wrap
+                .product
+                    width: 50%
+                    position: relative
+                    box-sizing: border-box
+                    // padding-right: 50px
+                    +pad 
+                        order: 2
+                        padding: 20px
+                        width: 100%
+                    +phone 
+                        order: 2
+                        padding: 20px
+                        width: 100%
+                    img
+                        border-radius: 40px
+                        width: 100%
+                    .more::after
+                        content: ""
+                        position: absolute
+                        background-color: #35355a
+                        width: 300px
+                        height: 0px
+                        z-index: -1
+                        left: 0
+                        transition: 0.3s
+                    .more
+                        z-index: 1
+                        position: absolute
+                        right: -60px
+                        bottom: -100px
+                        width: 300px
+                        height: 140px
+                        background-color: #585880
+                        display: flex
+                        align-items: center
+                        justify-content: space-evenly
+                        transition: 0.3s
+                        +pad 
+                            right: 0
+                            bottom: 0
+                            top: 50% 
+                            left: 0
+                            margin-left: auto  
+                            margin-right: auto
+                            box-shadow: 0px 0px 10px rgba(#000,0.5)
+                        +phone
+                            display: none
+                        &:hover::after
+                            height: 140px
+                        &:hover
+                            cursor: pointer
+                        p
+                            font-weight: 700
+                            font-size: 16px
+                            letter-spacing: 2.22px
+                            line-height: 19px
+                            color: #fff
+                        .path
+                            width: 70px
+                            height: 2px
+                            background-color: #fff
+                .protro
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    box-sizing: border-box
+                    // padding: 0px 0px 0px 40px
+                    width: 45%
+                    +phone 
+                        width: 100%
+                    h3
+                        margin-top: 10px
+                        font-size: 16px
+                        font-weight: 700
+                        letter-spacing: 2.22px
+                        line-height: 19px
+                        color: #fff
+                        +pad 
+                            text-align: center
+                        +phone 
+                            font-size: 12px
+                            text-align: center
+                    h2
+                        width: 100%
+                        margin-top: 10px
+                        font-size: 28px
+                        font-weight: 700
+                        letter-spacing: 3.63px
+                        line-height: 39px
+                        color: #fff
+                        position: relative
+                        +pad 
+                            text-align: center
+                        +phone 
+                            letter-spacing: 1.8px
+                            font-size: 18px
+                            text-align: center
+                        .subt
+                            position: absolute
+                            bottom: 6px
+                            left: -6px
+                            z-index: -1
+                            width: 355px
+                            height: 6px
+                            background-color: #26C6D0
+                            +pad 
+                                left: -20px
+                                right: 0px
+                                margin: auto
+                            +phone 
+                                width: 70%
+                                left: -20px
+                                right: 0px
+                                margin: auto
+                        span
+                            font-size: 48px
+                            color: #EE6C8A
+                            padding-left: 10px
+                    p
+                        margin-top: 10px
+                        font-size: 14px
+                        font-weight: 400
+                        line-height: 24px
+                        letter-spacing: 2px
+                        color: #fff
+                        +pad 
+                            display: none
+                        +phone 
+                            display: none
 @keyframes more
     0%
         width: 0

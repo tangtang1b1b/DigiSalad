@@ -14,7 +14,7 @@
   top: 0;
   z-index: 999;
   width: 100%;
-  padding: 20px 0px;
+  height: 100px;
   display: flex;
   align-items: center;
   transition: 0.3s;
@@ -439,6 +439,11 @@
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  .head .headinner {
+    padding: 0px 20px;
+  }
+}
 .head .headinner .bre {
   z-index: 1;
   position: absolute;
@@ -446,6 +451,12 @@
   top: 50%;
   transform: translateY(-50%);
   padding-left: 60px;
+}
+@media screen and (max-width: 768px) {
+  .head .headinner .bre {
+    box-sizing: border-box;
+    padding: 20px;
+  }
 }
 .head .headinner .bre img {
   width: 85%;
@@ -645,9 +656,15 @@
   z-index: -1;
   animation: go 1s 2.5s both;
 }
+@media screen and (max-width: 1024px) {
+  .intro .video .introinner .crea::after {
+    left: 60px;
+  }
+}
 @media screen and (max-width: 768px) {
   .intro .video .introinner .crea::after {
-    left: 0px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 @keyframes go {
@@ -742,6 +759,11 @@
 .about .aboutinner .subt img:nth-child(1) {
   transform: translateX(2px);
 }
+@media screen and (max-width: 768px) {
+  .about .aboutinner .subt img:nth-child(1) {
+    display: none;
+  }
+}
 .about .aboutinner .subt img:nth-child(2) {
   transform: translateX(-2px);
 }
@@ -753,6 +775,11 @@
   text-align: center;
   padding-bottom: 100px;
   background-color: #E5E5E5;
+}
+@media screen and (max-width: 768px) {
+  .about .aboutinner h2 {
+    font-size: 22px;
+  }
 }
 .about .aboutinner h2 span {
   font-size: 48px;
@@ -871,6 +898,7 @@
 }
 @media screen and (max-width: 768px) {
   .award .awardinner .use h2 {
+    font-size: 22px;
     padding-left: 0;
   }
 }
@@ -934,14 +962,16 @@
 @media screen and (max-width: 1024px) {
   .ingrad {
     height: 100%;
-    padding: 100px 0px;
+    padding: 100px 20px;
     transform: translateY(0px);
+    box-sizing: border-box;
   }
 }
 @media screen and (max-width: 768px) {
   .ingrad {
     height: 100%;
-    padding: 100px 0px;
+    box-sizing: border-box;
+    padding: 100px 20px;
     transform: translateY(0px);
   }
 }
@@ -964,16 +994,18 @@
   text-align: center;
   color: #fff;
 }
+@media screen and (max-width: 768px) {
+  .ingrad .ingradinner h2 {
+    font-size: 20px;
+  }
+}
 .ingrad .ingradinner span {
   font-size: 48px;
   color: #EE6C8A;
   padding-left: 10px;
 }
 .ingrad .ingradinner .subt {
-  position: absolute;
   top: 366px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 @media screen and (max-width: 768px) {
   .ingrad .ingradinner .subt {
@@ -984,8 +1016,20 @@
 .ingrad .ingradinner .subt img:nth-child(1) {
   transform: translateX(2px);
 }
+@media screen and (max-width: 768px) {
+  .ingrad .ingradinner .subt img:nth-child(1) {
+    display: none;
+  }
+}
 .ingrad .ingradinner .subt img:nth-child(2) {
   transform: translateX(-2px);
+}
+@media screen and (max-width: 768px) {
+  .ingrad .ingradinner .subt img:nth-child(2) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 .ingrad .ingradinner .morep {
   padding-top: 70px;
@@ -1116,6 +1160,11 @@
   text-align: center;
   color: #fff;
 }
+@media screen and (max-width: 768px) {
+  .ingrad .ingradinner .morev {
+    font-size: 12px;
+  }
+}
 .ingrad .ingradinner .morev::after {
   content: "";
   position: absolute;
@@ -1126,6 +1175,11 @@
   width: 420px;
   height: 10px;
   z-index: -1;
+}
+@media screen and (max-width: 768px) {
+  .ingrad .ingradinner .morev::after {
+    width: 100%;
+  }
 }
 
 .tony {
@@ -1235,6 +1289,8 @@
 }
 @media screen and (max-width: 768px) {
   .tony .tonyinner .type p {
+    line-height: 24px;
+    font-size: 16px;
     margin-top: 50px;
     text-align: center;
   }
@@ -1306,6 +1362,11 @@
 .brand .brandinner .subt img:nth-child(3) {
   transform: translateX(-63px);
 }
+@media screen and (max-width: 768px) {
+  .brand .brandinner .subt img:nth-child(3) {
+    display: none;
+  }
+}
 .brand .brandinner p {
   margin-top: 70px;
   font-weight: 400;
@@ -1355,49 +1416,6 @@
   justify-content: center;
   position: relative;
 }
-@media screen and (max-width: 768px) {
-  .banner .bannerinner {
-    flex-wrap: wrap;
-  }
-}
-.banner .bannerinner .arrowl {
-  background-color: #26C6D0;
-  border-radius: 100%;
-  top: 50%;
-  position: absolute;
-  transition: 0.3s;
-  transform: translateX(-200%) translateY(-50%);
-  left: 0;
-}
-.banner .bannerinner .arrowl img {
-  width: 100%;
-}
-.banner .bannerinner .arrowl:hover {
-  transform: translateX(-200%) translateY(-50%) scale(105%);
-  cursor: pointer;
-}
-.banner .bannerinner .arrowl:active {
-  transform: translateX(-200%) translateY(-50%) scale(90%);
-}
-.banner .bannerinner .arrowr {
-  background-color: #26C6D0;
-  border-radius: 100%;
-  position: absolute;
-  top: 50%;
-  transition: 0.3s;
-  transform: translate(200%, -50%) rotate(180deg);
-  right: 0;
-}
-.banner .bannerinner .arrowr img {
-  width: 100%;
-}
-.banner .bannerinner .arrowr:hover {
-  transform: translate(200%, -50%) rotate(180deg) scale(105%);
-  cursor: pointer;
-}
-.banner .bannerinner .arrowr:active {
-  transform: translate(200%, -50%) rotate(180deg) scale(90%);
-}
 .banner .bannerinner .math {
   position: absolute;
   right: -100px;
@@ -1426,24 +1444,94 @@
   align-items: flex-end;
   color: #fff;
 }
-.banner .bannerinner .product {
-  width: 55%;
-  position: relative;
-  box-sizing: border-box;
-  padding-right: 50px;
+.banner .bannerinner .middle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1024px) {
+  .banner .bannerinner .middle {
+    padding: 20px;
+  }
 }
 @media screen and (max-width: 768px) {
-  .banner .bannerinner .product {
+  .banner .bannerinner .middle {
+    padding: 20px;
+    flex-direction: column;
+  }
+}
+.banner .bannerinner .middle .arrowl {
+  background-color: #26C6D0;
+  border-radius: 100%;
+  top: 50%;
+  transition: 0.3s;
+  left: 0px;
+}
+@media screen and (max-width: 768px) {
+  .banner .bannerinner .middle .arrowl {
+    display: none;
+  }
+}
+.banner .bannerinner .middle .arrowl img {
+  width: 100%;
+}
+.banner .bannerinner .middle .arrowl:hover {
+  cursor: pointer;
+}
+.banner .bannerinner .middle .arrowr {
+  background-color: #26C6D0;
+  border-radius: 100%;
+  top: 50%;
+  transition: 0.3s;
+  transform: rotate(180deg);
+  right: 0px;
+}
+.banner .bannerinner .middle .arrowr img {
+  width: 100%;
+}
+.banner .bannerinner .middle .arrowr:hover {
+  cursor: pointer;
+}
+.banner .bannerinner .middle .box {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+@media screen and (max-width: 1024px) {
+  .banner .bannerinner .middle .box {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 768px) {
+  .banner .bannerinner .middle .box {
+    flex-wrap: wrap;
+  }
+}
+.banner .bannerinner .middle .box .product {
+  width: 50%;
+  position: relative;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 1024px) {
+  .banner .bannerinner .middle .box .product {
     order: 2;
     padding: 20px;
     width: 100%;
   }
 }
-.banner .bannerinner .product img {
+@media screen and (max-width: 768px) {
+  .banner .bannerinner .middle .box .product {
+    order: 2;
+    padding: 20px;
+    width: 100%;
+  }
+}
+.banner .bannerinner .middle .box .product img {
   border-radius: 40px;
   width: 100%;
 }
-.banner .bannerinner .product .more::after {
+.banner .bannerinner .middle .box .product .more::after {
   content: "";
   position: absolute;
   background-color: #35355a;
@@ -1453,11 +1541,11 @@
   left: 0;
   transition: 0.3s;
 }
-.banner .bannerinner .product .more {
+.banner .bannerinner .middle .box .product .more {
   z-index: 1;
   position: absolute;
   right: -60px;
-  bottom: -90px;
+  bottom: -100px;
   width: 300px;
   height: 140px;
   background-color: #585880;
@@ -1466,106 +1554,137 @@
   justify-content: space-evenly;
   transition: 0.3s;
 }
-@media screen and (max-width: 768px) {
-  .banner .bannerinner .product .more {
+@media screen and (max-width: 1024px) {
+  .banner .bannerinner .middle .box .product .more {
     right: 0;
     bottom: 0;
-    top: 100%;
+    top: 50%;
     left: 0;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
 }
-.banner .bannerinner .product .more:hover::after {
+@media screen and (max-width: 768px) {
+  .banner .bannerinner .middle .box .product .more {
+    display: none;
+  }
+}
+.banner .bannerinner .middle .box .product .more:hover::after {
   height: 140px;
 }
-.banner .bannerinner .product .more:hover {
+.banner .bannerinner .middle .box .product .more:hover {
   cursor: pointer;
 }
-.banner .bannerinner .product .more p {
+.banner .bannerinner .middle .box .product .more p {
   font-weight: 700;
   font-size: 16px;
   letter-spacing: 2.22px;
   line-height: 19px;
   color: #fff;
 }
-.banner .bannerinner .product .more .path {
+.banner .bannerinner .middle .box .product .more .path {
   width: 70px;
   height: 2px;
   background-color: #fff;
 }
-.banner .bannerinner .protro {
+.banner .bannerinner .middle .box .protro {
   display: flex;
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
-  padding: 10px 10px 10px 40px;
   width: 45%;
 }
 @media screen and (max-width: 768px) {
-  .banner .bannerinner .protro {
+  .banner .bannerinner .middle .box .protro {
     width: 100%;
   }
 }
-.banner .bannerinner .protro h3 {
-  margin-top: 20px;
+.banner .bannerinner .middle .box .protro h3 {
+  margin-top: 10px;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 2.22px;
   line-height: 19px;
   color: #fff;
 }
-@media screen and (max-width: 768px) {
-  .banner .bannerinner .protro h3 {
+@media screen and (max-width: 1024px) {
+  .banner .bannerinner .middle .box .protro h3 {
     text-align: center;
   }
 }
-.banner .bannerinner .protro h2 {
-  margin-top: 20px;
-  font-size: 32px;
+@media screen and (max-width: 768px) {
+  .banner .bannerinner .middle .box .protro h3 {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+.banner .bannerinner .middle .box .protro h2 {
+  width: 100%;
+  margin-top: 10px;
+  font-size: 28px;
   font-weight: 700;
   letter-spacing: 3.63px;
   line-height: 39px;
   color: #fff;
   position: relative;
 }
-@media screen and (max-width: 768px) {
-  .banner .bannerinner .protro h2 {
+@media screen and (max-width: 1024px) {
+  .banner .bannerinner .middle .box .protro h2 {
     text-align: center;
   }
 }
-.banner .bannerinner .protro h2 .subt {
+@media screen and (max-width: 768px) {
+  .banner .bannerinner .middle .box .protro h2 {
+    letter-spacing: 1.8px;
+    font-size: 18px;
+    text-align: center;
+  }
+}
+.banner .bannerinner .middle .box .protro h2 .subt {
   position: absolute;
   bottom: 6px;
   left: -6px;
   z-index: -1;
-  width: 396px;
+  width: 355px;
   height: 6px;
   background-color: #26C6D0;
 }
-@media screen and (max-width: 768px) {
-  .banner .bannerinner .protro h2 .subt {
+@media screen and (max-width: 1024px) {
+  .banner .bannerinner .middle .box .protro h2 .subt {
     left: -20px;
     right: 0px;
     margin: auto;
   }
 }
-.banner .bannerinner .protro h2 span {
+@media screen and (max-width: 768px) {
+  .banner .bannerinner .middle .box .protro h2 .subt {
+    width: 70%;
+    left: -20px;
+    right: 0px;
+    margin: auto;
+  }
+}
+.banner .bannerinner .middle .box .protro h2 span {
   font-size: 48px;
   color: #EE6C8A;
   padding-left: 10px;
 }
-.banner .bannerinner .protro p {
-  padding: 20px 0px 40px 0px;
-  margin-top: 20px;
-  font-size: 16px;
+.banner .bannerinner .middle .box .protro p {
+  margin-top: 10px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 2px;
   color: #fff;
 }
+@media screen and (max-width: 1024px) {
+  .banner .bannerinner .middle .box .protro p {
+    display: none;
+  }
+}
 @media screen and (max-width: 768px) {
-  .banner .bannerinner .protro p {
+  .banner .bannerinner .middle .box .protro p {
     display: none;
   }
 }
