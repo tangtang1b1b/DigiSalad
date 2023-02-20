@@ -1,22 +1,4 @@
-function run(){
-    let product = document.querySelector(".product");
-    for(let i=1;i<=4;i++){
-        product.innerHTML=`<img src="./image/${i}.png" alt="">
-                            <div class="more">
-                                <p>VIEW PROJECT</p>
-                                <div class="path"></div>
-                            </div>`;
-        setTimeout(()=>{
-            product.innerHTML="";
-            product.innerHTML=`<img src="./image/1.png" alt="">
-            <div class="more">
-                <p>VIEW PROJECT</p>
-                <div class="path"></div>
-            </div>`;
-        },1500);
-    }
-}
-window.addEventListener("load",run);
+
 const vm = Vue.createApp({
     data(){
         return{
