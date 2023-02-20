@@ -20,7 +20,6 @@ const vm = Vue.createApp({
                     let dtop = v.getBoundingClientRect().top;
                     if(dtop<window.innerHeight){
                         sidein[i].classList.add("sideinin");
-                        // v.classList.add("sidego");
                     }
                 })
             });
@@ -102,7 +101,6 @@ const vm = Vue.createApp({
                         v.style.backgroundColor="#414042";
                     })
                 }
-                // head.style.backgroundColor="white";
                 startbtn.classList.remove("close");
                 list.style.animation="opaout 0.5s both";
                 aside[0].style.animation="asidego 0.3s both";
@@ -131,12 +129,22 @@ const vm = Vue.createApp({
                 protro.style.animation="right 0.3s 0.1s both";
                 setTimeout(()=>{
                     this.count+=1;
+                    product.innerHTML=`<img src='./image/${this.count}.png' alt=''>
+                                        <div class="more">
+                                            <p>VIEW PROJECT</p>
+                                            <div class="path"></div>
+                                        </div>`;
                     numf.innerText = '0'+this.count;
                     product.style.animation="rightin 0.3s 0.1s both";
                     protro.style.animation="rightin 0.3s 0.2s both";
                     bannerimg.style.animation="backin 20s infinite";
                     if(this.count==5){
                         this.count=1;
+                        product.innerHTML=`<img src='./image/${this.count}.png' alt=''>
+                        <div class="more">
+                            <p>VIEW PROJECT</p>
+                            <div class="path"></div>
+                        </div>`;
                         numf.innerText = '0'+this.count;
                     }
                 },300);
@@ -152,12 +160,22 @@ const vm = Vue.createApp({
                 protro.style.animation="right 0.3s 0.1s both";
                 setTimeout(()=>{
                     this.count-=1;
+                    product.innerHTML=`<img src='./image/${this.count}.png' alt=''>
+                    <div class="more">
+                        <p>VIEW PROJECT</p>
+                        <div class="path"></div>
+                    </div>`;
                     numf.innerText = '0'+this.count;
                     product.style.animation="rightin 0.3s 0.1s both";
                     protro.style.animation="rightin 0.3s 0.2s both";
                     bannerimg.style.animation="backin 20s infinite";
                     if(this.count==0){
                         this.count=4;
+                        product.innerHTML=`<img src='./image/${this.count}.png' alt=''>
+                        <div class="more">
+                            <p>VIEW PROJECT</p>
+                            <div class="path"></div>
+                        </div>`;
                         numf.innerText = '0'+this.count;
                     }
                 },300);
