@@ -72,11 +72,21 @@
         background-image: url(../image/Rectangle.png)
         background-size: cover
         transition: 0.2s
+        +phone 
+            padding: 80px 20px 20px 20px
         .listinner
             margin: auto
             width: calc( 100vw - 400px )
+            height: 100%
             display: flex
             justify-content: space-evenly
+            +pad 
+                width: 100%
+                flex-direction: column
+                justify-content: space-evenly
+            +phone 
+                justify-content: center
+
             .lil
                 width: 33.3333%
                 height: calc( 100vh - 150px )
@@ -84,6 +94,15 @@
                 flex-direction: column
                 justify-content: space-evenly
                 position: relative
+                +pad 
+                    width: 100%
+                    flex-direction: row
+                    height: 33.333333%
+                +phone
+                    width: 100%
+                    flex-direction: column
+                    height: 33.333333%
+
                 .abus::before
                     content: ""
                     position: absolute
@@ -92,6 +111,8 @@
                     width: 50px
                     height: 70px
                     left: 50px
+                    +phone 
+                        display: none
                 .abus
                     width: 100%
                     height: 30%
@@ -106,6 +127,12 @@
                     box-sizing: border-box
                     padding: 40px 20px
                     transition: 0.3s
+                    +pad 
+                        width: 45%    
+                        height: 90%
+                    +phone 
+                        width: 100%
+                        height: 50%
                     &:hover
                         cursor: pointer
                         box-shadow: 0px 5px 10px rgba(#000,0.2)
@@ -128,6 +155,8 @@
                     width: 60px
                     height: 60px
                     left: 50px
+                    +phone 
+                        display: none
                 .work
                     position: relative
                     width: 100%
@@ -143,6 +172,15 @@
                     box-sizing: border-box
                     padding: 40px 20px
                     transition: 0.3s
+                    +pad 
+                        width: 45%    
+                        height: 90%
+                    +phone
+                        justify-content: center
+                        align-items: center
+                        width: 100%
+                        height: 50%
+
                     &:hover
                         cursor: pointer
                         box-shadow: 0px 5px 10px rgba(#000,0.2)
@@ -164,6 +202,17 @@
                 flex-direction: column
                 justify-content: space-between
                 align-items: center
+                +pad 
+                    width: 100%
+                    flex-direction: row
+                    height: 33.333333%
+                    justify-content: space-evenly
+                +phone
+                    justify-content: space-evenly
+                    align-items: center
+                    width: 100%
+                    flex-direction: column
+                    height: 33.333333%
                 .caree::before
                     content: ""
                     position: absolute
@@ -173,6 +222,8 @@
                     height: 45px
                     left: 20px
                     bottom: 120px
+                    +phone 
+                        display: none
                 .caree
                     position: relative
                     width: 65%
@@ -187,6 +238,14 @@
                     box-sizing: border-box
                     padding: 40px 20px
                     transition: 0.3s
+                    +pad 
+                        width: 45%    
+                        height: 90%
+                    +phone 
+                        justify-content: center
+                        align-items: center
+                        width: 100%
+                        height: 50%
                     &:hover
                         box-shadow: 0px 5px 10px rgba(#000,0.2)
                         cursor: pointer
@@ -210,6 +269,8 @@
                     height: 70px
                     left: 30px
                     bottom: 100px
+                    +phone 
+                        display: none
                 .insig
                     position: relative
                     width: 65%
@@ -224,6 +285,14 @@
                     box-sizing: border-box
                     padding: 40px 20px
                     transition: 0.3s
+                    +pad 
+                        width: 45%    
+                        height: 90%
+                    +phone 
+                        justify-content: center
+                        align-items: center
+                        width: 100%
+                        height: 50%
                     &:hover
                         box-shadow: 0px 5px 10px rgba(#000,0.2)
                         cursor: pointer
@@ -244,6 +313,15 @@
                 display: flex
                 flex-direction: column
                 justify-content: space-evenly
+                +pad 
+                    width: 100%
+                    flex-direction: row
+                    height: 33.333333%
+                    align-items: center
+                +phone
+                    width: 100%
+                    flex-direction: column
+                    height: 33.333333%
                 .serv::before
                     content: ""
                     position: absolute
@@ -253,6 +331,8 @@
                     height: 60px
                     left: 30px
                     bottom: 110px
+                    +phone 
+                        display: none
                 .serv
                     position: relative
                     width: 100%
@@ -267,6 +347,14 @@
                     box-sizing: border-box
                     padding: 40px 20px
                     transition: 0.3s
+                    +pad 
+                        width: 45%    
+                        height: 90%
+                    +phone 
+                        justify-content: center
+                        align-items: center
+                        width: 100%
+                        height: 50%
                     &:hover
                         box-shadow: 0px 5px 10px rgba(#000,0.2)
                         cursor: pointer
@@ -292,6 +380,14 @@
                     box-sizing: border-box
                     padding: 40px 20px
                     transition: 0.3s
+                    +pad 
+                        width: 45%
+                        height: 90%
+                    +phone 
+                        justify-content: center
+                        align-items: center
+                        width: 100%
+                        height: 50%
                     &:hover
                         box-shadow: 0px 5px 10px rgba(#000,0.2)
                         cursor: pointer

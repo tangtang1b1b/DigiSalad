@@ -76,11 +76,29 @@
   background-size: cover;
   transition: 0.2s;
 }
+@media screen and (max-width: 768px) {
+  .head .list {
+    padding: 80px 20px 20px 20px;
+  }
+}
 .head .list .listinner {
   margin: auto;
   width: calc(100vw - 400px);
+  height: 100%;
   display: flex;
   justify-content: space-evenly;
+}
+@media screen and (max-width: 1024px) {
+  .head .list .listinner {
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 768px) {
+  .head .list .listinner {
+    justify-content: center;
+  }
 }
 .head .list .listinner .lil {
   width: 33.3333%;
@@ -90,6 +108,20 @@
   justify-content: space-evenly;
   position: relative;
 }
+@media screen and (max-width: 1024px) {
+  .head .list .listinner .lil {
+    width: 100%;
+    flex-direction: row;
+    height: 33.333333%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .head .list .listinner .lil {
+    width: 100%;
+    flex-direction: column;
+    height: 33.333333%;
+  }
+}
 .head .list .listinner .lil .abus::before {
   content: "";
   position: absolute;
@@ -98,6 +130,11 @@
   width: 50px;
   height: 70px;
   left: 50px;
+}
+@media screen and (max-width: 768px) {
+  .head .list .listinner .lil .abus::before {
+    display: none;
+  }
 }
 .head .list .listinner .lil .abus {
   width: 100%;
@@ -113,6 +150,18 @@
   box-sizing: border-box;
   padding: 40px 20px;
   transition: 0.3s;
+}
+@media screen and (max-width: 1024px) {
+  .head .list .listinner .lil .abus {
+    width: 45%;
+    height: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .head .list .listinner .lil .abus {
+    width: 100%;
+    height: 50%;
+  }
 }
 .head .list .listinner .lil .abus:hover {
   cursor: pointer;
@@ -149,6 +198,11 @@
   height: 60px;
   left: 50px;
 }
+@media screen and (max-width: 768px) {
+  .head .list .listinner .lil .work::before {
+    display: none;
+  }
+}
 .head .list .listinner .lil .work {
   position: relative;
   width: 100%;
@@ -164,6 +218,20 @@
   box-sizing: border-box;
   padding: 40px 20px;
   transition: 0.3s;
+}
+@media screen and (max-width: 1024px) {
+  .head .list .listinner .lil .work {
+    width: 45%;
+    height: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .head .list .listinner .lil .work {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+  }
 }
 .head .list .listinner .lil .work:hover {
   cursor: pointer;
@@ -199,6 +267,23 @@
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 1024px) {
+  .head .list .listinner .lim {
+    width: 100%;
+    flex-direction: row;
+    height: 33.333333%;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 768px) {
+  .head .list .listinner .lim {
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    height: 33.333333%;
+  }
+}
 .head .list .listinner .lim .caree::before {
   content: "";
   position: absolute;
@@ -208,6 +293,11 @@
   height: 45px;
   left: 20px;
   bottom: 120px;
+}
+@media screen and (max-width: 768px) {
+  .head .list .listinner .lim .caree::before {
+    display: none;
+  }
 }
 .head .list .listinner .lim .caree {
   position: relative;
@@ -223,6 +313,20 @@
   box-sizing: border-box;
   padding: 40px 20px;
   transition: 0.3s;
+}
+@media screen and (max-width: 1024px) {
+  .head .list .listinner .lim .caree {
+    width: 45%;
+    height: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .head .list .listinner .lim .caree {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+  }
 }
 .head .list .listinner .lim .caree:hover {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
@@ -260,6 +364,11 @@
   left: 30px;
   bottom: 100px;
 }
+@media screen and (max-width: 768px) {
+  .head .list .listinner .lim .insig::before {
+    display: none;
+  }
+}
 .head .list .listinner .lim .insig {
   position: relative;
   width: 65%;
@@ -274,6 +383,20 @@
   box-sizing: border-box;
   padding: 40px 20px;
   transition: 0.3s;
+}
+@media screen and (max-width: 1024px) {
+  .head .list .listinner .lim .insig {
+    width: 45%;
+    height: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .head .list .listinner .lim .insig {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+  }
 }
 .head .list .listinner .lim .insig:hover {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
@@ -308,6 +431,21 @@
   flex-direction: column;
   justify-content: space-evenly;
 }
+@media screen and (max-width: 1024px) {
+  .head .list .listinner .lir {
+    width: 100%;
+    flex-direction: row;
+    height: 33.333333%;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .head .list .listinner .lir {
+    width: 100%;
+    flex-direction: column;
+    height: 33.333333%;
+  }
+}
 .head .list .listinner .lir .serv::before {
   content: "";
   position: absolute;
@@ -317,6 +455,11 @@
   height: 60px;
   left: 30px;
   bottom: 110px;
+}
+@media screen and (max-width: 768px) {
+  .head .list .listinner .lir .serv::before {
+    display: none;
+  }
 }
 .head .list .listinner .lir .serv {
   position: relative;
@@ -332,6 +475,20 @@
   box-sizing: border-box;
   padding: 40px 20px;
   transition: 0.3s;
+}
+@media screen and (max-width: 1024px) {
+  .head .list .listinner .lir .serv {
+    width: 45%;
+    height: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .head .list .listinner .lir .serv {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+  }
 }
 .head .list .listinner .lir .serv:hover {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
@@ -370,6 +527,20 @@
   box-sizing: border-box;
   padding: 40px 20px;
   transition: 0.3s;
+}
+@media screen and (max-width: 1024px) {
+  .head .list .listinner .lir .contac {
+    width: 45%;
+    height: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .head .list .listinner .lir .contac {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+  }
 }
 .head .list .listinner .lir .contac:hover {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
