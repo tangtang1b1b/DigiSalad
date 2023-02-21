@@ -43,6 +43,17 @@
     display: none;
   }
 }
+.head .salad .redc {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation: red 1s infinite;
+}
 .head .salad img {
   position: fixed;
   top: 50%;
@@ -50,6 +61,28 @@
   transform: translate(-50%, -50%);
   width: 50%;
   animation: byebye 1s 1.5s both;
+}
+@keyframes red {
+  0% {
+    border-radius: 15%;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  25% {
+    border-radius: 30%;
+    transform: translate(-50%, -50%) rotate(50deg);
+  }
+  50% {
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+  75% {
+    border-radius: 30%;
+    transform: translate(-50%, -50%) rotate(135deg);
+  }
+  100% {
+    border-radius: 15%;
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
 }
 @keyframes bye {
   0% {
@@ -837,6 +870,7 @@
 }
 .intro .video .introinner .mark {
   width: 200px;
+  animation: out 1s 2.8s both;
 }
 @media screen and (max-width: 768px) {
   .intro .video .introinner .mark {
@@ -858,6 +892,24 @@
   .intro .video .introinner .crea {
     text-align: center;
   }
+}
+.intro .video .introinner .crea span {
+  margin-right: 15px;
+}
+.intro .video .introinner .crea span:nth-child(1) {
+  animation: out 1s 3.2s both;
+}
+.intro .video .introinner .crea span:nth-child(2) {
+  animation: out 1s 3.5s both;
+}
+.intro .video .introinner .crea span:nth-child(4) {
+  animation: out 1s 3.4s both;
+}
+.intro .video .introinner .crea span:nth-child(6) {
+  animation: out 1s 3.6s both;
+}
+.intro .video .introinner .crea span:nth-child(7) {
+  animation: out 1s 3s both;
 }
 .intro .video .introinner .crea::before {
   content: ".";
@@ -881,7 +933,7 @@
   width: 0px;
   height: 8px;
   z-index: -1;
-  animation: go 1s 2.5s both;
+  animation: go 1s 3.8s both;
 }
 @media screen and (max-width: 1024px) {
   .intro .video .introinner .crea::after {
@@ -892,6 +944,14 @@
   .intro .video .introinner .crea::after {
     left: 50%;
     transform: translateX(-50%);
+  }
+}
+@keyframes out {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 @keyframes go {
