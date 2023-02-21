@@ -14,8 +14,31 @@ const vm = Vue.createApp({
         }
     },
     methods: {
+        see(e){
+            let more1sp = document.querySelector("#more1 span");
+            let more1 = document.querySelector("#more1");
+            let w = more1.getBoundingClientRect().left;
+            let h = more1.offsetTop;
+            while(more1.offsetParent){
+                h+=more1.offsetParent.offsetTop;
+                more1=more1.offsetParent;
+            }
+            let eh = e.pageY - h;
+            let ew = e.pageX - w;
+            console.log(e.pageX,e.pageY);
+            console.log(w,h);
+            more1sp.style=`left: ${ew}px;top: ${eh}px;`;
+        },
+        good(){
+            more1.addEventListener("mouseenter",(e)=>{
+                this.see(e);
+            })
+            more1.addEventListener("mouseout",(e)=>{
+                this.see(e);
+            })
+        },
         load() {
-            for (let i = 0; i < images.length; i++) {
+            for (let i=0;i<images.length;i++) {
                 let img = new Image();
                 img.src = images[i];
                 console.log(img.src);
@@ -175,6 +198,7 @@ const vm = Vue.createApp({
     },
     mounted(){
         this.load();
+        this.good();
         this.showImage();
         this.sidein();
         this.bye();

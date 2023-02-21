@@ -1082,16 +1082,6 @@
   opacity: 0;
   transition: 0.5s;
 }
-.about .aboutinner .more::after {
-  content: "";
-  position: absolute;
-  background-color: #35355a;
-  width: 283px;
-  height: 0px;
-  z-index: -1;
-  left: 0;
-  transition: 0.3s;
-}
 .about .aboutinner .more.sideinin {
   transform: translateY(0px);
   opacity: 1;
@@ -1107,15 +1097,28 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  overflow: hidden;
   transform: translateY(30px);
   opacity: 0;
   transition: 0.5s;
 }
-.about .aboutinner .more:hover::after {
-  height: 86px;
-}
 .about .aboutinner .more:hover {
   cursor: pointer;
+}
+.about .aboutinner .more:hover span {
+  width: 250%;
+  height: 600px;
+}
+.about .aboutinner .more span {
+  top: 0;
+  left: 0;
+  transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  background-color: #35355a;
 }
 .about .aboutinner .more p {
   font-weight: 700;
@@ -1128,6 +1131,7 @@
   width: 52px;
   height: 2px;
   background-color: #fff;
+  z-index: 1;
 }
 
 .award {
@@ -1398,11 +1402,12 @@
   content: "";
   position: absolute;
   background-color: #35355a;
-  width: 294px;
-  height: 0px;
+  transform: translateX(-50px) skew(-30deg);
+  width: 0px;
+  height: 92px;
   z-index: -1;
   left: 0;
-  transition: 0.3s;
+  transition: 0.5s ease-in-out;
 }
 .ingrad .ingradinner .more.sideinin {
   transform: translateY(0px);
@@ -1419,12 +1424,13 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  overflow: hidden;
   transform: translateY(30px);
   opacity: 0;
   transition: 0.5s;
 }
 .ingrad .ingradinner .more:hover::after {
-  height: 92px;
+  width: 400px;
 }
 .ingrad .ingradinner .more:hover {
   cursor: pointer;
@@ -1894,6 +1900,10 @@
 }
 .banner .bannerinner .middle .arrowl:hover {
   cursor: pointer;
+  transform: scale(1.1);
+}
+.banner .bannerinner .middle .arrowl:active {
+  transform: scale(1);
 }
 .banner .bannerinner .middle .arrowr {
   background-color: #26C6D0;
@@ -1908,6 +1918,10 @@
 }
 .banner .bannerinner .middle .arrowr:hover {
   cursor: pointer;
+  transform: rotate(180deg) scale(1.1);
+}
+.banner .bannerinner .middle .arrowr:active {
+  transform: rotate(180deg) scale(1);
 }
 .banner .bannerinner .middle .box {
   width: 100%;
@@ -2144,13 +2158,13 @@
 }
 @keyframes backin {
   0% {
-    transform: translate(-50%, -50%) scale(120%);
+    transform: translate(-53%, -47%) scale(110%);
   }
   50% {
-    transform: translate(-50%, -50%) scale(100%);
+    transform: translate(-50%, -50%) scale(110%);
   }
   100% {
-    transform: translate(-50%, -50%) scale(120%);
+    transform: translate(-53%, -47%) scale(110%);
   }
 }
 @keyframes backmode {
