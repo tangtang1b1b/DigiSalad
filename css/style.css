@@ -831,6 +831,7 @@
 }
 @media screen and (max-width: 768px) {
   .intro .video {
+    border-radius: 0px 0px 0px 0px;
     padding-bottom: 133%;
   }
 }
@@ -1029,6 +1030,11 @@
   padding: 120px 0px 70px 0px;
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  .about {
+    padding: 60px 0px 70px 0px;
+  }
+}
 .about .aboutinner.sideinin {
   transform: translateY(0px);
   opacity: 1;
@@ -1212,8 +1218,9 @@
 }
 @media screen and (max-width: 768px) {
   .award .awardinner {
+    border-radius: 0px 0px 0px 0px;
     display: block;
-    padding: 30px;
+    padding: 60px 30px 30px 30px;
   }
 }
 .award .awardinner .use {
@@ -1346,9 +1353,10 @@
 }
 @media screen and (max-width: 768px) {
   .ingrad {
+    border-radius: 0px;
     height: 100%;
     box-sizing: border-box;
-    padding: 100px 20px;
+    padding: 50px 20px;
     transform: translateY(0px);
   }
 }

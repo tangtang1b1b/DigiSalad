@@ -596,6 +596,7 @@
         border-radius: 0px 0px 50px 50px
         overflow: hidden
         +phone 
+            border-radius: 0px 0px 0px 0px
             padding-bottom: 133%
         iframe
             z-index: -1
@@ -741,6 +742,8 @@
     background-color: #E5E5E5
     padding: 120px 0px 70px 0px
     width: 100%
+    +phone 
+        padding: 60px 0px 70px 0px
     .aboutinner.sideinin
         +sidein
     .aboutinner
@@ -868,8 +871,9 @@
             display: flex
             flex-direction: column
         +phone
+            border-radius: 0px 0px 0px 0px
             display: block
-            padding: 30px
+            padding: 60px 30px 30px 30px
         .use
             position: relative
             width: 40%
@@ -946,9 +950,10 @@
         transform: translateY(0px)
         box-sizing: border-box
     +phone 
+        border-radius: 0px
         height: 100%
         box-sizing: border-box
-        padding: 100px 20px
+        padding: 50px 20px
         transform: translateY(0px)
     .ingradinner.sideinin 
         +sidein
