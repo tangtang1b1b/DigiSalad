@@ -722,6 +722,8 @@
             transform: translate(-50%,30px)
             opacity: 0
             transition: 0.5s
+            +pad 
+                display: flex
             +phone 
                 display: flex
             img:nth-child(1)
@@ -746,13 +748,11 @@
             span
                 font-size: 48px
                 color: #EE6C8A
-        .video.sideinin
-            +sidein
         .video
             position: relative
             width: 100%
             padding-bottom: 56.25%
-            +sideout
+            margin-top: 80px
             iframe
                 position: absolute
                 width: 100%
