@@ -51,16 +51,8 @@
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  background-color: red;
+  background-color: #26c6d0;
   animation: red 1s infinite;
-}
-.head .salad img {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  animation: byebye 1s 1.5s both;
 }
 @keyframes red {
   0% {
@@ -918,6 +910,7 @@
   left: 635px;
   font-size: 60px;
   color: #EE6C8A;
+  animation: out 1s 3s both;
 }
 @media screen and (max-width: 768px) {
   .intro .video .introinner .crea::before {
@@ -1168,17 +1161,19 @@
 .about .aboutinner .more:hover span {
   width: 250%;
   height: 600px;
+  box-shadow: 0px 0px 30px 30px #35355a;
 }
 .about .aboutinner .more span {
   top: 0;
   left: 0;
-  transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
   transform: translate(-50%, -50%);
   position: absolute;
   border-radius: 50%;
   width: 0;
   height: 0;
   background-color: #35355a;
+  box-shadow: 0px 0px 30px 0px #35355a;
 }
 .about .aboutinner .more p {
   font-weight: 700;
