@@ -2,6 +2,7 @@ const images = ['./image/1.png','./image/2.png','./image/3.png','./image/4.png']
 const vm = Vue.createApp({
     data(){
         return{
+            time:null,
             ggs:4,
             do:0,
             count:1,
@@ -150,32 +151,32 @@ const vm = Vue.createApp({
                 this.check=true;
             }
         },
-        right(){
-            let bannerimg = document.querySelector(".bannerimg");
-            let numf = document.querySelector(".numf");
-            let product = document.querySelector(".product");
-            let protro = document.querySelector(".protro");
-            if(this.count<=4){
-                product.style.animation="right 0.5s 0.1s forwards";
-                protro.style.animation="right 0.5s forwards";
-                setTimeout(()=>{
-                    this.count+=1;
-                    numf.innerText = '0'+this.count;
-                    product.style.animation="rightin 0.5s 0.1s both";
-                    protro.style.animation="rightin 0.5s 0.2s both";
-                    bannerimg.style.animation="backin 20s infinite";
-                    if(this.count==5){
-                        this.count=1;
-                        numf.innerText = '0'+this.count;
-                    }
-                },300);
+        timer(){
+            this.time = setInterval(()=>{
+                this.checkRRR();
+            },5000)
+        },
+        stoptimer() {
+            if (this.time) {
+                clearInterval(this.time);
+                this.time = null;
             }
+        },
+        right(){
+            let subt = document.querySelector("#subt");
+            subt.style.animation="none";
+            this.stoptimer();
+            this.checkRRR();
+            this.timer();
         },
         left(){
             let bannerimg = document.querySelector(".bannerimg");
             let numf = document.querySelector(".numf");
             let product = document.querySelector(".product");
             let protro = document.querySelector(".protro");
+            let subt = document.querySelector("#subt");
+            subt.style.animation="none";
+            this.stoptimer();
             if(this.count>=1){
                 product.style.animation="right 0.5s 0.1s forwards";
                 protro.style.animation="right 0.5s forwards";
@@ -189,14 +190,41 @@ const vm = Vue.createApp({
                         this.count=4;
                         numf.innerText = '0'+this.count;
                     }
+                    this.timer();
+                    subt.style.animation="wid 5s infinite";
                 },300);
             }
         },
         showImage(a){
             return a==this.count
         },
+        checkRRR(){
+            let bannerimg = document.querySelector(".bannerimg");
+            let numf = document.querySelector(".numf");
+            let product = document.querySelector(".product");
+            let protro = document.querySelector(".protro");
+            let subt = document.querySelector("#subt");
+            if(this.count<=4){
+                product.style.animation="right 0.5s 0.1s forwards";
+                protro.style.animation="right 0.5s forwards";
+                setTimeout(()=>{
+                    this.count+=1;
+                    numf.innerText = '0'+this.count;
+                    product.style.animation="rightin 0.5s 0.1s both";
+                    protro.style.animation="rightin 0.5s 0.2s both";
+                    bannerimg.style.animation="backin 20s infinite";
+                    if(this.count==5){
+                        this.count=1;
+                        numf.innerText = '0'+this.count;
+                    }
+                    subt.style.animation="wid 5s infinite";
+                },300);
+            }
+        }
     },
     mounted(){
+        this.timer();
+        this.checkRRR();
         this.load();
         this.good();
         this.showImage();
