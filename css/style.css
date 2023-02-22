@@ -1373,6 +1373,11 @@
   opacity: 0;
   transition: 0.5s;
 }
+@media screen and (max-width: 1024px) {
+  .ingrad .ingradinner {
+    padding-top: 30px;
+  }
+}
 @media screen and (max-width: 768px) {
   .ingrad .ingradinner {
     padding: 30px;
@@ -1814,6 +1819,9 @@
   transition: 0.5s;
 }
 .brand .brandinner .subt {
+  width: 100%;
+  display: flex;
+  justify-content: center;
   position: absolute;
   left: 50%;
   transform: translate(-50%, 30px);
@@ -1878,6 +1886,11 @@
   display: flex;
   align-items: center;
   padding: 200px 0px;
+}
+@media screen and (max-width: 768px) {
+  .banner {
+    padding: 20px 0px;
+  }
 }
 .banner .bannerimg {
   position: absolute;
