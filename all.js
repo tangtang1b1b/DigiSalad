@@ -2,6 +2,7 @@ const images = ['./image/1.png','./image/2.png','./image/3.png','./image/4.png']
 const vm = Vue.createApp({
     data(){
         return{
+            video:false,
             time:null,
             ggs:4,
             do:0,
@@ -220,7 +221,24 @@ const vm = Vue.createApp({
                     subt.style.animation="wid 5s infinite";
                 },300);
             }
-        }
+        },
+        play(){
+            let blue = document.querySelector("#blue");
+            let vi1 = document.querySelector(".vi1");
+            let vi2 = document.querySelector(".vi2");
+            if(this.video==false){
+                blue.play();
+                vi1.style="display:none;";
+                this.video=true;
+                vi2.style="animation: up 0.3s ease-in-out both";
+                blue.style="filter: brightness(1)";
+            }else{
+                blue.pause();
+                this.video=false;
+                vi2.style="animation: down 0.3s ease-in-out both";
+                blue.style="filter: brightness(0.7)";
+            }
+        },
     },
     mounted(){
         this.timer();
