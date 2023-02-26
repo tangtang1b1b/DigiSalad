@@ -1,5 +1,5 @@
 @mixin phone()
-    @media screen and ( max-width: 768px )
+    @media screen and ( max-width: 767px )
         @content
 @mixin pad()
     @media screen and ( max-width: 1024px )
@@ -48,9 +48,9 @@
         background-color: #fff
         animation: bye 1s 2s both
         +pad
-            display: none
+            // display: none
         +phone 
-            display: none
+            // display: none
         .redc   
             position: fixed
             top: 50%
@@ -590,14 +590,12 @@
     .video 
         position: relative
         box-sizing: border-box
-        // padding-bottom: 56.25%
         width: 100%
         height: 100vh
         border-radius: 0px 0px 50px 50px
         overflow: hidden
         +phone 
             border-radius: 0px 0px 0px 0px
-            // padding-bottom: 133%
         video 
             position: absolute
             width: 105%
@@ -626,14 +624,20 @@
             transform: translate(-55%,0%)
             width: 100%
             max-width: 1020px
+            +pad
+                top: 30%
+                transform: translate(-50%,-50%)
             +phone 
+                top: 0px
                 transform: translate(-50%,0%)
                 padding:50% 0px 0px 0px
             .mark
                 width: 200px
                 animation: out 1s 2.8s both
                 +phone 
-                    display: none
+                    width: 150px
+                    margin: auto
+                    // display: none
                 img
                     width: 100%
 
@@ -644,13 +648,20 @@
                 letter-spacing: 9.17px
                 line-height: 70px
                 +phone 
+                    width: fit-content
+                    position: relative
                     font-size: 26px
-                    letter-spacing: 4.17px
+                    letter-spacing: 3.17px
                     text-align: center
+                    line-height: 45px
                     padding: 10px
                     box-sizing: border-box
+                    left: 50%
+                    transform: translateX(-50%)
                 span
                     margin-right: 15px
+                    +phone 
+                        margin: 0px 3px
                 span:nth-child(1)
                     animation: out 1s 3.2s both
                 span:nth-child(2)
@@ -670,7 +681,8 @@
                 color: #EE6C8A
                 animation: out 1s 3s both
                 +phone 
-                    display: none
+                    left: calc(100% - 15px)
+                    bottom: 20px
             .crea::after
                 content: ""
                 position: absolute
@@ -684,6 +696,7 @@
                 +pad 
                     left: 60px
                 +phone 
+                    animation: gophone 1s 3.8s both
                     left: 50%
                     transform: translateX(-50%)
             @keyframes out
@@ -696,6 +709,11 @@
                     width: 0
                 100%
                     width: 570px
+            @keyframes gophone
+                0%
+                    width: 0
+                100%
+                    width: 350px
         .introinner::before
             content: "DIGITAL AGENCY"
             position: absolute
@@ -1552,13 +1570,17 @@
                         letter-spacing: 2.22px
                         line-height: 19px
                         color: #fff
+                        position: relative
                         +pad 
+                            left: 50%
+                            transform: translateX(-50%) 
+                            width: fit-content
                             text-align: center
                         +phone 
                             font-size: 12px
                             text-align: center
                     h2
-                        width: 100%
+                        width: fit-content
                         margin-top: 10px
                         font-size: 28px
                         font-weight: 700
@@ -1566,7 +1588,10 @@
                         line-height: 39px
                         color: #fff
                         position: relative
-                        +pad 
+                        +pad
+                            left: 50%
+                            transform: translateX(-50%) 
+                            width: fit-content
                             text-align: center
                         +phone 
                             letter-spacing: 1.8px
@@ -1608,7 +1633,7 @@
     0%
         width: 0px
     100%
-        width: 355px
+        width: 100%
 @keyframes more
     0%
         width: 0
