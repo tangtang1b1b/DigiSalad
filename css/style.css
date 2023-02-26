@@ -1391,7 +1391,8 @@
 }
 .award .awardinner .type img {
   width: 50%;
-  paddong: 20px;
+  padding: 20px;
+  box-sizing: border-box;
   transform: translateY(30px);
   opacity: 0;
   transition: 0.5s;
